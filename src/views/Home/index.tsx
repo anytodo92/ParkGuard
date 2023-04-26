@@ -1,7 +1,8 @@
 
 import Banner from "../Common/Banner";
-import Faq from "./Faq";
 import ShapeBottom from "../Common/ShapeBottom";
+import Faq from "./Faq";
+import Concept from "./Concept";
 import {
   Images
 } from "../../utils/assets";
@@ -20,6 +21,7 @@ const Startseite = (): JSX.Element => {
         bgColor="#fff"
         height={120}
       />
+      <Concept />
     </HomeWrapper>
   );
 };
