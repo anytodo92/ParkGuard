@@ -14,7 +14,8 @@ const theme: DefaultTheme = {
 
     purple_primary: "#000744",
     blue_primary: "#10548f",
-    blue_second: "#6797cc",
+    blue_second: "#6797cc",   
+    blue_third: "#e6f0fB",        
 
     gray_primary: "#0000007f",
     red_primary: "#ee4141",

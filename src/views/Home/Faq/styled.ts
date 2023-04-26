@@ -1,26 +1,28 @@
 import styled from "styled-components";
 
 export const FaqWrapper = styled.section`
-  background-color: #e6f0fb;
+  background-color: ${props => props.theme.colors.blue_third};
   padding: 100px 0 40px;
   .content {
     margin: 0 ${props => props.theme.margins.primary}px;
 
     > h1 {
-      position: relative;
-      font-weight: 700;
-      font-size: 45px;
-      line-height: 49px;
-      color: ${props => props.theme.colors.blue_primary};
-      padding-bottom: 3px;
-      &:after {
-        content: '';
-        position: absolute;
-        display: inline-block;
-        bottom: 0;
-        left: 0;
-        width: 70px;
-        border-bottom: 4px solid ${props => props.theme.colors.blue_primary};
+      > p {
+        position: relative;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 49px;
+        color: ${props => props.theme.colors.blue_primary};
+        padding-bottom: 3px;
+        &:after {
+          content: '';
+          position: absolute;
+          display: inline-block;
+          bottom: 0;
+          left: 0;
+          width: 70px;
+          border-bottom: 4px solid ${props => props.theme.colors.blue_primary};
+        }
       }
     }
 
