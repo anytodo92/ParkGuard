@@ -11,48 +11,36 @@ const Footer = (): JSX.Element => {
     <FooterWrapper>
       <section>
         <div className="content">
-          <div><img src={Images.WhiteLogoUrl} /></div>
-          <div>
-            <div className="wrapper">
-              <div className="icon">
-                <img src={Icons.CallIconUrl} />
-                <div className="line"></div>
-              </div>
-              <div className="txt">
-                <p><a className="link" href="mailto:info@dynamicbodymassage.ch">info@dynamicbodymassage.ch</a></p>
-                <p><a className="link" href="tel:+41 079 123 45 67">+41 079 123 45 67</a></p>
-              </div>
-              <div className="social">
-                <a href="https://www.facebook.com"><img src={Icons.FacebookIconUrl} /></a>
-                <a href="https://www.instagram.com"><img src={Icons.CameraIconUrl} /></a>
-              </div>
-            </div>
+          <div className="col">
+            <h2>Adresse</h2>
+            <p>ParkGuard<br />Leimatt B<br />6317 Zug</p>
           </div>
-          <div>
-            <div className="wrapper">
-              <div className="icon">
-                <img src={Icons.SignupIconUrl} />
-                <div className="line"></div>
-              </div>
-              <div className="txt">
-                <p>
-                  Sportgym Aarburg<br />Wallgrabenweg 13<br />4663 Aarburg
-                </p>
-              </div>
-            </div>
+          <div className="col">
+            <h2>Kontakt</h2>
+            <p>T +41 58 123 45 67<br />kontakt@parkguard.ch</p>
+          </div>
+          <div className="col">
+            <h2>Rechtliches</h2>
+            <p><a className="link" href="/impressum">Impressum</a></p>
+            <p><a className="link" href="/datenschutz">Datenschutz</a></p>
+            <p>AGB</p>
           </div>
         </div>
-        
       </section>
       <section>
         <div className="content">
-          <div className="txt">©Copyright 2023 - dynamic body massage</div>
-          <div className="policy">
-            <a className="link" href="/impressum">Impressum</a>
-            <a className="link" href="/datenschutz">Datenschutz</a>
-          </div>
+          <div className="txt">&copy;Copyright 2022 - ParkX AG</div>          
         </div>
       </section>
+      <div className="content">
+        <div className="card">
+          <h2>Interessiert?</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit a rerum distinctio, non commodi consectetur facilis nostrum
+          </p>
+          <button>Kontaktieren</button>
+        </div>
+      </div>
     </FooterWrapper>
   );
 };

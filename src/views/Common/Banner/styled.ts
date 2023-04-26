@@ -147,7 +147,7 @@ export const BannerWrapper = styled.section`
         bottom: -50px;
         right: 0;
         padding: 40px 20px 70px;
-        background: #FFFFFF;
+        background: ${props => props.theme.colors.white};
         box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
         border-radius: 30px;
         transform: rotate(6.76deg);
