@@ -1,167 +1,117 @@
 import styled from "styled-components";
 
 export const FooterWrapper = styled.footer`
-  position: relative;
+  
+  overflow: hidden;
   width: 100%;
   color: ${props => props.theme.colors.white};
   z-index: ${props => props.theme.zIndexes.footer_layout};
-  
+  padding-top: 100px;
   .content {
+    position: relative;
     margin: 0 ${props => props.theme.margins.primary}px;
   }
 
+  .card {
+    position: absolute;
+    bottom: -40px;
+    right: 100px;
+    padding: 40px 20px 70px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    transform: rotate(6.76deg);
+    width: 360px;
+
+    > h2 {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 40px;
+      color: ${props => props.theme.colors.purple_primary};
+    }
+    > p {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      color: ${props => props.theme.colors.purple_primary};
+      margin-top: 30px;
+    }
+    > button {
+      height: 42px;
+      border: 1.5px solid ${props => props.theme.colors.purple_primary};
+      border-radius: 42px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      color: ${props => props.theme.colors.purple_primary};
+      margin-top: 30px;
+      cursor: pointer;
+    }
+  }
+
   > section {
-    &:first-child {
+    &:nth-child(1) {
       padding: 30px 0 40px;
-      background-color: ${props => props.theme.colors.blue_primary};
+      background-color: #003664;
 
       .content {
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 35px;
-        p, a.link {
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 28px;
-          color: ${props => props.theme.colors.white};
-        }
-
-        a.link {
-          &:hover {
+        
+        .col {
+          > h2 {
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 33px;
             color: ${props => props.theme.colors.white};
-            text-decoration: none;
           }
-        }
-
-        > div {
-          display: flex;
-          justify-content: center;
-
-          &:nth-child(1) {
-            order: 3;
-          }
-          &:nth-child(2) {
-            order: 1;
-          }
-          &:nth-child(3) {
-            order: 2;
-          }
-
-          .wrapper {
-            .icon {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              row-gap: 15px;
-              > img {
-                width: 44px;
-                height: 44px;
-              }
-
-              .line {
-                width: 68px;
-                border-top: 3px solid ${props => props.theme.colors.white};
-              }
+          > p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: ${props => props.theme.colors.white};
+            &:nth-child(2) {
+              margin-top: 17px;
             }
-            .txt {
-              margin-top: 5px;
-              text-align: center;
-            }
-
-            .social {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              column-gap: 10px;
-              margin-top: 5px;
-            }
-
-          }
-
-          &:last-child {
-            text-align: left;
           }
         }
       }
     }
 
-    &:last-child {
-      background-color: ${props => props.theme.colors.blue_secondary};
+    &:nth-child(2) {
+      background-color: #0E4E84;
       
       .content {
         display: flex;
-        padding: 30px 0;
+        padding: 20px 0;
         font-size: 16px;
         font-weight: 400;
         line-height: 28px;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        .txt {
-          text-align: center;
-        }
-        .policy {
-          display: flex;
-          column-gap: 30px;
-          a.link {
-            &:hover {
-              color: ${props => props.theme.colors.white};
-              text-decoration: none;
-            }
-          }
-        }
+        color: ${props => props.theme.colors.white};
       }
     }
   }
 
   @media (min-width: ${props => props.theme.breakpoints.laptop}) {
-    > section {
-      &:last-child {
-        .content {
-          flex-direction: row;
-          justify-content: space-between;
-        }
-      }
-    }
+    
   }
 
   @media (min-width: ${props => props.theme.breakpoints.desktop}) {
     > section {
-      &:first-child {
+      &:nth-child(1) {
         padding: 20px 0;
         .content {
-          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-columns: 200px 200px 200px;
 
-          > div {
-            &:nth-child(1) {
-              justify-content: flex-start;
-              order: 1;
-            }
-            &:nth-child(2) {
-              order: 2;
-              .wrapper {
-                .icon {
-                  align-items: center;
-                }
-                .txt {
-                  text-align: center;
-                }
-              }
-            }
-            &:nth-child(3) {
-              order: 3;
-              justify-content: flex-end;
-              .wrapper {
-                .icon {
-                  align-items: flex-end;
-                }
-                .txt {
-                  text-align: right;
-                }
-              }
-            }
-          }
+          
         }
+      }
+      &:nth-child(2) {
+        
       }
     }
   }
