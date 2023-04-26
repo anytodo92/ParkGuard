@@ -20,16 +20,16 @@ const MainHeader: React.FC = () => {
   const [currentPath, setCurrentPath] = useState<string>("/");
   const [linkList, setLinkList] = useState<Array<any>>([
     {
-      title: "Angebot / Preise",
-      path: "/#angebot",
+      title: "Zusammenarbeit starten",
+      path: "/zusammenarbeit-starten",
     },
     {
-      title: "Über mich",
-      path: "/#uber",
+      title: "Unsere Lösung",
+      path: "/unsere-losung",
     },
     {
-      title: "Kontakt / Termin",
-      path: "/#kontakt",
+      title: "Kontakt",
+      path: "/kontakt",
     },
   ]);
 
@@ -58,13 +58,20 @@ const MainHeader: React.FC = () => {
           onClick={toggleMenu}
         >
           <svg width="31" height="17" viewBox="0 0 31 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line y1="1" x2="30.9899" y2="1" stroke="#1677A8" strokeWidth="2"/>
-          <line y1="8.15234" x2="30.9899" y2="8.15234" stroke="#1677A8" strokeWidth="2"/>
-          <line y1="15.8984" x2="30.9899" y2="15.8984" stroke="#1677A8" strokeWidth="2"/>
+          <line y1="1" x2="30.9899" y2="1" stroke="#fff" strokeWidth="2"/>
+          <line y1="8.15234" x2="30.9899" y2="8.15234" stroke="#fff" strokeWidth="2"/>
+          <line y1="15.8984" x2="30.9899" y2="15.8984" stroke="#fff" strokeWidth="2"/>
           </svg>
         </div>
+        <div className="logo">
+          <a href="/">
+            <img src={Images.WhiteLogoUrl} />
+          </a>
+        </div>
         <div className="control">
+          <div className="func"><button>Busse erhalten?</button></div>
           <ul className="menu">
+          
           {linkList.map((data, index) =>
             <li key={index} className={`${(data.path === location.pathname) ? "active" : ""}`}>
               <Link to={data.path}>{data.title}</Link>
