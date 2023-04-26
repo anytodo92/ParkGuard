@@ -25,8 +25,28 @@ export const MainHeaderWrapper = styled.nav`
 
   .content {
     margin: 0 ${props => props.theme.margins.primary}px;
-    
+    .logo {
+      display: none;
+    }
+
     .control {
+      .func {
+        display: none;
+        button {
+          width: 200px;
+          height: 36px;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          border: 1.5px solid ${props => props.theme.colors.white};
+          border-radius: 36px;
+          color: ${props => props.theme.colors.white};
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 22px;
+          cursor: pointer;
+        }
+      }
       .menu {
         font-weight: 500;
         font-size: 18px;
@@ -42,7 +62,6 @@ export const MainHeaderWrapper = styled.nav`
           border-bottom: 1px solid #eaeaea;
           > a {
             text-decoration: none;
-            font-family: ${props => props.theme.fonts.open_sans};
             color: ${props => props.theme.colors.blue_primary};
           }
 
@@ -60,6 +79,7 @@ export const MainHeaderWrapper = styled.nav`
       width: 30px;
       cursor: pointer;
       color: ${props => props.theme.colors.black};
+
     }
   }
 
@@ -83,14 +103,23 @@ export const MainHeaderWrapper = styled.nav`
       height: 90px;
       
       .content {
+        .logo {
+          visibility: hidden;
+        }
         .control {
-          .menu {
-            height: 90px;            
+          .func {
+            button {
+              color: ${props => props.theme.colors.blue_primary};
+              border-color: ${props => props.theme.colors.blue_primary};
+            }
           }
-          .toggle-btn  {
-            > span {
-              background-color: ${props => props.theme.colors.blue_primary};
-            }   
+          .menu {
+            height: 90px; 
+            > li {
+              > a {
+                color: ${props => props.theme.colors.blue_primary};
+              }
+            }           
           }
         }
       }
@@ -103,11 +132,15 @@ export const MainHeaderWrapper = styled.nav`
       display: flex;
       justify-content: space-between;
       flex-direction: row;
+      align-items: center;
 
       .control {
         display: flex;
         align-items: center;
-
+        .func {
+          margin-right: 18px;
+          display: block;
+        }
         .menu {
           display: flex;
           align-items: center;
@@ -115,7 +148,7 @@ export const MainHeaderWrapper = styled.nav`
           height: 100px;
           > li {
             float: left;
-            margin: 0px 28px;
+            margin: 0px 18px;
             border-bottom: none;
             padding: 0;
 
@@ -124,18 +157,21 @@ export const MainHeaderWrapper = styled.nav`
             }
             
             > a {
-              color: ${props => props.theme.colors.blue_primary}
+              color: ${props => props.theme.colors.white}
             }
 
             &.active > a {
-              color: ${props => props.theme.colors.blue_primary};
+              color: ${props => props.theme.colors.white};
             }
           }
         }
       }
 
       .toggle-btn {
-        visibility: hidden;
+        display: none;
+      }
+      .logo {
+        display: block;
       }
     }
   }
