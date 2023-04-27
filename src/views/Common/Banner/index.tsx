@@ -30,43 +30,50 @@ const Banner = ({ data, page }: BannerPropsType): JSX.Element => {
       </div>
       <div className="content">
         <div className="summary">
-          <h2>Park-Busse erhalten?</h2>
-          <div className="desc">
-            Durch unser Sicherheitspersonal wurde eine Widerrechtliche Handlung festgestellt. Füllen Sie die nachfolgenden Informationen aus um zu den Details Ihres Verstosses zu gelangen.
-          </div>
-          <div className="func">
-            <button className="light-blue">Verstoss Nr. eingeben ...</button>
-            <button className="white">Zur Busse</button>
-          </div>
-          <div className="qa">
-            <h2>Fragen?</h2>
-            <p>
-              Hier finden Sie Antworten zu den Fragen<br />
-              in Bezug auf Umtriebsentschädigungen ...
-            </p>
-            <span className="icon">
-              <img src={Icons.ArrowDownLightBlueUrl} />
-            </span>
-          </div>
+          <h2>{data.title}</h2>
+          <div className="desc" dangerouslySetInnerHTML={{ __html: data.description }}></div>
+          {(data.button1 || data.button2)&&
+            <div className="func">
+              {data.button1&&
+                <button className="light-blue">{data.button1.text}</button>
+              }
+              {data.button2&&
+                <button className="white">{data.button2.text}</button>
+              }
+            </div>
+          }
+          {data.bottom&&
+            <div className="qa">
+              <h2>{data.bottom.title}</h2>
+              <p dangerouslySetInnerHTML={{ __html: data.bottom.description }}>
+              </p>
+              <span className="icon">
+                <img src={Icons.ArrowDownLightBlueUrl} />
+              </span>
+            </div>
+          }
+          
         </div>
         <div className="cards">
           <div className="card1">
-            <h2>
-              Wir kümmern uns um Falschparker 
-            </h2>
-            <p>
-              Die komplette digitale Lösung - kostenlos!
-              <br />
-              Zusammenarbeit starten ipsum dolor sit amet consectetur adipisicing elit. Impedit a rerum distinctio, non commodi consectetur facilis nostrum saepe architecto porro quidem quia necessitatibus ea corporis autem tempora perspiciatis expedita quibusdam!
-            </p>
-            <button>Zusammenarbeit</button>
+            <h2>{data.intro1.title}</h2>
+            {data.intro1.description&&
+              <p dangerouslySetInnerHTML={{ __html: data.intro1.description }}>
+              </p>
+            }
+            {data.intro1.buttonText&&
+              <button>{data.intro1.buttonText}</button>
+            }
           </div>
           <div className="card2">
-            <h2>Wie funktioniert’s?</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit a rerum distinctio, non commodi consectetur facilis nostrum saepe architecto porro quidem quia necessitatibus ea corpo
-            </p>
-            <button>Unsere Lösung</button>
+            <h2>{data.intro2.title}</h2>
+            {data.intro2.description&&
+              <p dangerouslySetInnerHTML={{ __html: data.intro2.description }}>
+              </p>
+            }
+            {data.intro2.buttonText&&
+              <button>{data.intro2.buttonText}</button>
+            }
           </div>
         </div>
       </div>

@@ -19,7 +19,7 @@ export const BannerWrapper = styled.section`
       background-position: center center;
       background-size: 100% 100%;
       height: 100%;
-      width: 50%;
+      width: 48%;
     }
   }
 
@@ -30,8 +30,9 @@ export const BannerWrapper = styled.section`
     display: flex;
     column-gap: 50px;
     .summary {
-      flex: 0 1 40%;
+      flex: 0 1 35%;
       padding-bottom: 100px;
+
       h2 {
         font-weight: 700;
         font-size: 45px;
