@@ -31,7 +31,9 @@ const Banner = ({ data, page }: BannerPropsType): JSX.Element => {
       <div className="content">
         <div className="summary">
           <h2 dangerouslySetInnerHTML={{ __html: data.title }}></h2>
-          <div className="desc" dangerouslySetInnerHTML={{ __html: data.description }}></div>
+          {data.description&&
+            <div className="desc" dangerouslySetInnerHTML={{ __html: data.description }}></div>
+          }
           {(data.form)&&
             <div className="form">
               <input placeholder={data.form.placeholder} />

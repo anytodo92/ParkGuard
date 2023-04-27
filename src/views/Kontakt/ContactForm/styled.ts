@@ -107,9 +107,9 @@ export const ContactFormWrapper = styled.section`
       font-size: 18px;
       line-height: 22px;
       color: ${props => props.theme.colors.white};
-      padding: 0 30px;
+      width: 200px;
       height: 42px;
-      border-radius: 42px;
+      border-radius: 15px;
       background-color: ${props => props.theme.colors.blue_primary};
       display: flex;
       justify-content: center;
