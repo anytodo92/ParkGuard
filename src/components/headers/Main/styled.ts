@@ -30,23 +30,7 @@ export const MainHeaderWrapper = styled.nav`
     }
 
     .control {
-      .func {
-        display: none;
-        button {
-          width: 200px;
-          height: 36px;
-          display: inline-flex;
-          justify-content: center;
-          align-items: center;
-          border: 1.5px solid ${props => props.theme.colors.white};
-          border-radius: 36px;
-          color: ${props => props.theme.colors.white};
-          font-weight: 400;
-          font-size: 18px;
-          line-height: 22px;
-          cursor: pointer;
-        }
-      }
+      
       .menu {
         font-weight: 500;
         font-size: 18px;
@@ -67,6 +51,23 @@ export const MainHeaderWrapper = styled.nav`
 
           &.active > a {
             color: ${props => props.theme.colors.blue_primary};
+          }
+
+          &.btn {
+            > a {
+              width: 200px;
+              height: 36px;
+              display: inline-flex;
+              justify-content: center;
+              align-items: center;
+              border: 1.5px solid ${props => props.theme.colors.white};
+              border-radius: 36px;
+              color: ${props => props.theme.colors.white};
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 22px;
+              cursor: pointer;
+            }
           }
         }
       }
@@ -107,17 +108,19 @@ export const MainHeaderWrapper = styled.nav`
           visibility: hidden;
         }
         .control {
-          .func {
-            button {
-              color: ${props => props.theme.colors.blue_primary};
-              border-color: ${props => props.theme.colors.blue_primary};
-            }
-          }
+          
           .menu {
             height: 90px; 
             > li {
               > a {
                 color: ${props => props.theme.colors.blue_primary};
+              }
+
+              &.btn {
+                > a {
+                  color: ${props => props.theme.colors.blue_primary};
+                  border-color: ${props => props.theme.colors.blue_primary};
+                }
               }
             }           
           }
@@ -137,10 +140,7 @@ export const MainHeaderWrapper = styled.nav`
       .control {
         display: flex;
         align-items: center;
-        .func {
-          margin-right: 18px;
-          display: block;
-        }
+        
         .menu {
           display: flex;
           align-items: center;
