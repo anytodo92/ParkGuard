@@ -105,7 +105,7 @@ export const MainHeaderWrapper = styled.nav`
       
       .content {
         .logo {
-          visibility: hidden;
+          
         }
         .control {
           
@@ -113,6 +113,9 @@ export const MainHeaderWrapper = styled.nav`
             height: 90px; 
             > li {
               > a {
+                color: ${props => props.theme.colors.blue_primary};
+              }
+              &.active > a {
                 color: ${props => props.theme.colors.blue_primary};
               }
 

@@ -65,7 +65,10 @@ const MainHeader: React.FC = () => {
         </div>
         <div className="logo">
           <a href="/">
-            <img src={Images.WhiteLogoUrl} />
+            {!stickyBar
+              ? <img src={Images.WhiteLogoUrl} />
+              : <img src={Images.DarkGrayLogoUrl} />
+            }
           </a>
         </div>
         <div className="control">

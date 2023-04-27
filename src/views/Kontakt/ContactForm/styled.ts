@@ -6,6 +6,7 @@ export const ContactFormWrapper = styled.section`
 
   .content {
     margin: 0 ${props => props.theme.margins.primary}px;
+    padding: 0 20px;
   }
 
   .alert {
@@ -152,9 +153,9 @@ export const ContactFormWrapper = styled.section`
     }
   }
 
-  @media (min-width: ${props => props.theme.breakpoints.desktop_lg}) {
+  @media (min-width: ${props => props.theme.breakpoints.desktop_ml}) {
     .content {
-      width: calc(${props => props.theme.maxWidth}px - 340px);
+      width: ${props => props.theme.maxWidth}px;
       margin: 0 auto;
     }
   }
