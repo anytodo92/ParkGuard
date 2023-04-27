@@ -16,11 +16,9 @@ const Startseite = (): JSX.Element => {
     description: `
       Durch unser Sicherheitspersonal wurde eine Widerrechtliche Handlung festgestellt. Füllen Sie die nachfolgenden Informationen aus um zu den Details Ihres Verstosses zu gelangen.
     `,
-    button1: {
-      text: "Verstoss Nr. eingeben ...",
-    },
-    button2: {
-      text: "Zur Busse",
+    form: {
+      placeholder: "Verstoss Nr. eingeben ...",
+      buttonText: "Zur Busse",
     },
     bottom: {
       title: "Fragen?",

@@ -32,14 +32,10 @@ const Banner = ({ data, page }: BannerPropsType): JSX.Element => {
         <div className="summary">
           <h2>{data.title}</h2>
           <div className="desc" dangerouslySetInnerHTML={{ __html: data.description }}></div>
-          {(data.button1 || data.button2)&&
-            <div className="func">
-              {data.button1&&
-                <button className="light-blue">{data.button1.text}</button>
-              }
-              {data.button2&&
-                <button className="white">{data.button2.text}</button>
-              }
+          {(data.form)&&
+            <div className="form">
+              <input placeholder={data.form.placeholder} />
+              <button>{data.form.buttonText}</button>
             </div>
           }
           {data.bottom&&
