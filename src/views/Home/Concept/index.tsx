@@ -43,7 +43,7 @@ const Concept = (): JSX.Element => {
           )}
         </div>
         <div className="func">
-          <button>Unsere Lösung</button>
+          <a href="#">Unsere Lösung</a>
         </div>
       </div>
     </ConceptWrapper>

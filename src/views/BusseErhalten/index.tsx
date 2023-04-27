@@ -1,16 +1,10 @@
-
 import Banner from "../Common/Banner";
-import ShapeBottom from "../Common/ShapeBottom";
 import Faq from "../Common/Faq";
-import Concept from "./Concept";
 import {
-  Images
-} from "../../utils/assets";
-import {
-  HomeWrapper
+  BusseErhaltenWrapper
 } from "./styled";
 
-const Startseite = (): JSX.Element => {
+const BusseErhalten = (): JSX.Element => {
   const bannerData = {
     title: "Park-Busse erhalten?",
     description: `
@@ -20,34 +14,7 @@ const Startseite = (): JSX.Element => {
       placeholder: "Verstoss Nr. eingeben ...",
       buttonText: "Zur Busse",
     },
-    bottom: {
-      title: "Fragen?",
-      description: `
-        Hier finden Sie Antworten zu den Fragen<br />in Bezug auf Umtriebsentschädigungen ...
-      `,
-    },
-
-    intro1: {
-      title: "Wir kümmern uns um Falschparker",
-      description: `
-        Die komplette digitale Lösung - kostenlos!
-        <br />
-        Zusammenarbeit starten ipsum dolor sit amet consectetur adipisicing elit. Impedit a rerum distinctio, non commodi consectetur facilis nostrum saepe architecto porro quidem quia necessitatibus ea corporis autem tempora perspiciatis expedita quibusdam!
-      `,
-      buttonText: "Zusammenarbeit"
-    },
-
-    intro2: {
-      title: "Wie funktioniert’s?",
-      description: `
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit a rerum distinctio, non commodi consectetur facilis nostrum saepe architecto porro quidem quia necessitatibus ea corpo
-      `,
-      buttonText: "Unsere Lösung"
-    }
-
   };
-
-
   const accordionData = {
     title: "<p>FAQ Umtriebsentschädigung</p>",
     description: `
@@ -87,17 +54,11 @@ const Startseite = (): JSX.Element => {
     ]
   }
   return (
-    <HomeWrapper>
-      <Banner data={bannerData} page="home" />
+    <BusseErhaltenWrapper>
+      <Banner data={bannerData} page="busse-erhalten" />
       <Faq data={accordionData} />
-      <ShapeBottom
-        fillColor="#e6f0fb"
-        bgColor="#fff"
-        height={120}
-      />
-      <Concept />
-    </HomeWrapper>
-  );
-};
+    </BusseErhaltenWrapper>
+  )
+}
 
-export default Startseite;
+export default BusseErhalten;

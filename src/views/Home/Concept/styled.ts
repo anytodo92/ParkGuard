@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ConceptWrapper = styled.section`
-  padding: 190px 0 20px;
+  padding: 190px 0 120px;
   .content {
     margin: 0 ${props => props.theme.margins.primary}px;
     > h1 {
@@ -57,12 +57,12 @@ export const ConceptWrapper = styled.section`
       display: flex;
       justify-content: center;
       margin-top: 35px;
-      button {
+      a {
         font-weight: 700;
         font-size: 18px;
         line-height: 22px;
         color: ${props => props.theme.colors.white};
-        width: 190px;
+        padding: 0 30px;
         height: 42px;
         border-radius: 42px;
         background-color: ${props => props.theme.colors.blue_primary};
@@ -70,6 +70,7 @@ export const ConceptWrapper = styled.section`
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        text-decoration: none;
       }
     }
   }

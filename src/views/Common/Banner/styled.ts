@@ -19,7 +19,7 @@ export const BannerWrapper = styled.section`
       background-position: center center;
       background-size: 100% 100%;
       height: 100%;
-      width: 50%;
+      width: 48%;
     }
   }
 
@@ -30,8 +30,9 @@ export const BannerWrapper = styled.section`
     display: flex;
     column-gap: 50px;
     .summary {
-      flex: 0 1 40%;
+      flex: 0 1 35%;
       padding-bottom: 100px;
+
       h2 {
         font-weight: 700;
         font-size: 45px;
@@ -45,12 +46,12 @@ export const BannerWrapper = styled.section`
         line-height: 22px;
         color: ${props => props.theme.colors.white};
       }
-      .func {
+      .form {
         display: flex;
         align-items: center;
         column-gap: 10px;
         margin-top: 30px;
-        button {
+        button, input {
           outline: 0;
           border: 0;
           height: 45px;
@@ -59,24 +60,38 @@ export const BannerWrapper = styled.section`
           font-size: 20px;
           line-height: 24px;
           cursor: pointer;
+        }
 
-          &.light-blue {
-            width: 315px;
+        input {
+          width: 315px;
+          color: ${props => props.theme.colors.white};
+          background-color: ${props => props.theme.colors.blue_second};
+          display: flex;
+          align-items: center;
+          padding-left: 30px;
+         
+          &::placeholder {
             color: ${props => props.theme.colors.white};
-            background-color: ${props => props.theme.colors.blue_second};
-            display: flex;
-            align-items: center;
-            padding-left: 30px;
+            opacity: 1;
           }
-          &.white {
-            width: 130px;
-            background-color: ${props => props.theme.colors.white};
-            color: ${props => props.theme.colors.purple};
-            display: flex;
-            align-items: center;
-            justify-content: center;
+
+          &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: ${props => props.theme.colors.white};
+          }
+
+          &::-ms-input-placeholder { /* Microsoft Edge */
+            color: ${props => props.theme.colors.white};
           }
         }
+        button {
+          width: 130px;
+          background-color: ${props => props.theme.colors.white};
+          color: ${props => props.theme.colors.purple_primary};
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
       }
       .qa {
         margin-top: 100px;
@@ -133,13 +148,17 @@ export const BannerWrapper = styled.section`
       .card1 {
         position: absolute;
         bottom: -30px;
-        left: 15%;
-        padding: 40px 20px 300px;
+        right: 10%;
+        padding: 40px 20px 170px;
         background: linear-gradient(180.39deg, #FFFFFF 27.72%, #ACCBEE 99.66%);
         box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
         border-radius: 30px;
         transform: rotate(-6.76deg);
         width: 534px;
+
+        .func {
+          padding-bottom: 130px;
+        }
       }
 
       .card2 {

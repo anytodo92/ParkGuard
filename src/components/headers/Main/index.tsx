@@ -20,15 +20,15 @@ const MainHeader: React.FC = () => {
   const [currentPath, setCurrentPath] = useState<string>("/");
   const [linkList, setLinkList] = useState<Array<any>>([
     {
-      title: "Zusammenarbeit starten",
-      path: "/zusammenarbeit-starten",
+      title: "Busse erhalten?",
+      path: "/busse-erhalten",
     },
     {
       title: "Unsere Lösung",
       path: "/unsere-losung",
     },
     {
-      title: "Kontakt",
+      title: "Zusammenarbeit starten / Kontakt",
       path: "/kontakt",
     },
   ]);
@@ -65,15 +65,18 @@ const MainHeader: React.FC = () => {
         </div>
         <div className="logo">
           <a href="/">
-            <img src={Images.WhiteLogoUrl} />
+            {!stickyBar
+              ? <img src={Images.WhiteLogoUrl} />
+              : <img src={Images.DarkGrayLogoUrl} />
+            }
           </a>
         </div>
         <div className="control">
-          <div className="func"><button>Busse erhalten?</button></div>
+          {/*<div className="func"><button>Busse erhalten?</button></div>*/}
           <ul className="menu">
           
           {linkList.map((data, index) =>
-            <li key={index} className={`${(data.path === location.pathname) ? "active" : ""}`}>
+            <li key={index} className={`${index === 0 ? "btn" : "" } ${(data.path === location.pathname) ? "active" : ""}`}>
               <Link to={data.path}>{data.title}</Link>
             </li>
           )}
