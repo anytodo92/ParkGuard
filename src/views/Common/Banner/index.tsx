@@ -30,7 +30,7 @@ const Banner = ({ data, page }: BannerPropsType): JSX.Element => {
       </div>
       <div className="content">
         <div className="summary">
-          <h2>{data.title}</h2>
+          <h2 dangerouslySetInnerHTML={{ __html: data.title }}></h2>
           <div className="desc" dangerouslySetInnerHTML={{ __html: data.description }}></div>
           {(data.form)&&
             <div className="form">

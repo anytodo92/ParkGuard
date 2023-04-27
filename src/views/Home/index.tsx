@@ -46,10 +46,50 @@ const Startseite = (): JSX.Element => {
     }
 
   };
+
+
+  const accordionData = {
+    title: "<p>FAQ Umtriebsentschädigung</p>",
+    description: `
+      Hier finden sie Antworten zu den am häufisten gestellten Fragen in Bezug auf Umtriebsentschätdgungen, 
+      ausgestellt durch Park Guard. Für weiter Fragen bitten wir Sie, das Kontaktformular zu verwenden und 
+      wir melden uns schnellstmöglich bei Ihnen.
+    `,
+    list: [
+      {
+        id: 1,
+        title: "Was ist eine Umtriebsenschädigung?",
+        content: `
+        Durch unser Sicherheitspersonal wurde eine Widerrechtliche Handlung festgestellt. Füllen Sie die nachfolgenden Informationen aus um zu den Details Ihres Verstosses zu gelangen.Durch unser Sicherheitspersonal wurde eine Widerrechtliche Handlung festgestellt. Füllen Sie die nachfolgenden Informationen aus um zu den Details Ihres Verstosses zu gelangen.Durch unser Sicherheitspersonal wurde eine Widerrechtliche Handlung festgestellt. Füllen Sie die nachfolgenden Informationen aus um zu den Details Ihres Verstosses zu gelangen.
+        `,
+      },
+      {
+        id: 2,
+        title: "Was geschieht, wenn die Umtriebsentschädigung nicht fristgerecht beglichen wird?",
+        content: `
+        Durch unser Sicherheitspersonal wurde eine Widerrechtliche Handlung festgestellt. Füllen Sie die nachfolgenden Informationen aus um zu den Details Ihres Verstosses zu gelangen.Durch unser Sicherheitspersonal wurde eine Widerrechtliche Handlung festgestellt. Füllen Sie die nachfolgenden Informationen aus um zu den Details Ihres Verstosses zu gelangen.Durch unser Sicherheitspersonal wurde eine Widerrechtliche Handlung festgestellt. Füllen Sie die nachfolgenden Informationen aus um zu den Details Ihres Verstosses zu gelangen.
+        `,
+      },
+      {
+        id: 3,
+        title: "Was sind berechtigte Einwände?",
+        content: `
+        Durch unser Sicherheitspersonal wurde eine Widerrechtliche Handlung festgestellt. Füllen Sie die nachfolgenden Informationen aus um zu den Details Ihres Verstosses zu gelangen.Durch unser Sicherheitspersonal wurde eine Widerrechtliche Handlung festgestellt. Füllen Sie die nachfolgenden Informationen aus um zu den Details Ihres Verstosses zu gelangen.Durch unser Sicherheitspersonal wurde eine Widerrechtliche Handlung festgestellt. Füllen Sie die nachfolgenden Informationen aus um zu den Details Ihres Verstosses zu gelangen.
+        `,
+      },
+      {
+        id: 4,
+        title: "Wie reiche ich einen Einwand ein?",
+        content: `
+        Durch unser Sicherheitspersonal wurde eine Widerrechtliche Handlung festgestellt. Füllen Sie die nachfolgenden Informationen aus um zu den Details Ihres Verstosses zu gelangen.Durch unser Sicherheitspersonal wurde eine Widerrechtliche Handlung festgestellt. Füllen Sie die nachfolgenden Informationen aus um zu den Details Ihres Verstosses zu gelangen.Durch unser Sicherheitspersonal wurde eine Widerrechtliche Handlung festgestellt. Füllen Sie die nachfolgenden Informationen aus um zu den Details Ihres Verstosses zu gelangen.
+        `,
+      },
+    ]
+  }
   return (
     <HomeWrapper>
       <Banner data={bannerData} page="home" />
-      <Faq />
+      <Faq data={accordionData} />
       <ShapeBottom
         fillColor="#e6f0fb"
         bgColor="#fff"
