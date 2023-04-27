@@ -133,7 +133,7 @@ export const BannerWrapper = styled.section`
       .card1 {
         position: absolute;
         bottom: -30px;
-        left: 15%;
+        right: 10%;
         padding: 40px 20px 300px;
         background: linear-gradient(180.39deg, #FFFFFF 27.72%, #ACCBEE 99.66%);
         box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
