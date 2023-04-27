@@ -4,10 +4,14 @@ import {
   FaqWrapper
 } from "./styled";
 
-
+interface FaqData {
+  id: number;
+  title: string;
+  content: string;
+}
 const Faq = (): JSX.Element => {
-  const [openedIdList, setOpenedIdList] = useState([]); 
-  const list: any[] = [
+  const [openedIdList, setOpenedIdList] = useState<number[]>([]); 
+  const list: FaqData[] = [
     {
       id: 1,
       title: "Was ist eine Umtriebsenschädigung?",

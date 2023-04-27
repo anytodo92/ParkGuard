@@ -11,10 +11,10 @@ import {
 } from "./styled";
 
 const Startseite = (): JSX.Element => {
- 
+  const bannerData = {};
   return (
     <HomeWrapper>
-      <Banner />
+      <Banner data={bannerData} page="home" />
       <Faq />
       <ShapeBottom
         fillColor="#e6f0fb"

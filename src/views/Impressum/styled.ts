@@ -9,7 +9,7 @@ export const ImpressumWrapper = styled.div`
 
   .txt {
     letter-spacing: 0.6px;
-    color: ${props => props.theme.colors.black_primary};
+    color: ${props => props.theme.colors.black};
     font-size: 18px;
     line-height: 27px;
     font-weight: 400;

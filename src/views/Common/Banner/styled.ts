@@ -71,7 +71,7 @@ export const BannerWrapper = styled.section`
           &.white {
             width: 130px;
             background-color: ${props => props.theme.colors.white};
-            color: ${props => props.theme.colors.purple};
+            color: ${props => props.theme.colors.purple_primary};
             display: flex;
             align-items: center;
             justify-content: center;
