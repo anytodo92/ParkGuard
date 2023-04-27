@@ -149,12 +149,16 @@ export const BannerWrapper = styled.section`
         position: absolute;
         bottom: -30px;
         right: 10%;
-        padding: 40px 20px 300px;
+        padding: 40px 20px 170px;
         background: linear-gradient(180.39deg, #FFFFFF 27.72%, #ACCBEE 99.66%);
         box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
         border-radius: 30px;
         transform: rotate(-6.76deg);
         width: 534px;
+
+        .func {
+          padding-bottom: 130px;
+        }
       }
 
       .card2 {

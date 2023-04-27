@@ -42,7 +42,7 @@ const Faq = (): JSX.Element => {
     },
   ]
   return (
-    <FaqWrapper>
+    <FaqWrapper className="accordion">
       <div className="content">
         <h1>
           <p>FAQ Umtriebsentschädigung</p>

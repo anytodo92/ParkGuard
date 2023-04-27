@@ -10,7 +10,7 @@ type BannerPropsType = {
 
 const Banner = ({ data, page }: BannerPropsType): JSX.Element => {
   return (
-    <BannerWrapper className={page}>
+    <BannerWrapper className={`banner ${page}`}>
       <div
         className="bg"
         style={{
@@ -50,27 +50,36 @@ const Banner = ({ data, page }: BannerPropsType): JSX.Element => {
           }
           
         </div>
+
         <div className="cards">
-          <div className="card1">
-            <h2>{data.intro1.title}</h2>
-            {data.intro1.description&&
-              <p dangerouslySetInnerHTML={{ __html: data.intro1.description }}>
-              </p>
-            }
-            {data.intro1.buttonText&&
-              <button>{data.intro1.buttonText}</button>
-            }
-          </div>
-          <div className="card2">
-            <h2>{data.intro2.title}</h2>
-            {data.intro2.description&&
-              <p dangerouslySetInnerHTML={{ __html: data.intro2.description }}>
-              </p>
-            }
-            {data.intro2.buttonText&&
-              <button>{data.intro2.buttonText}</button>
-            }
-          </div>
+          {(data.intro1 && data.intro2)&&
+            <>
+              <div className="card1">
+                <h2>{data.intro1.title}</h2>
+                {data.intro1.description&&
+                  <p dangerouslySetInnerHTML={{ __html: data.intro1.description }}>
+                  </p>
+                }
+                {data.intro1.buttonText&&
+                  <div className="func">
+                    <button>{data.intro1.buttonText}</button>
+                  </div>
+                }
+              </div>
+              <div className="card2">
+                <h2>{data.intro2.title}</h2>
+                {data.intro2.description&&
+                  <p dangerouslySetInnerHTML={{ __html: data.intro2.description }}>
+                  </p>
+                }
+                {data.intro2.buttonText&&
+                  <div className="func">
+                    <button>{data.intro2.buttonText}</button>
+                  </div>
+                }
+              </div>
+            </>
+          }
         </div>
       </div>
 

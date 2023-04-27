@@ -1,7 +1,7 @@
 
 import Banner from "../Common/Banner";
 import ShapeBottom from "../Common/ShapeBottom";
-import Faq from "./Faq";
+import Faq from "../Common/Faq";
 import Concept from "./Concept";
 import {
   Images
