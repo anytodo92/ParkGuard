@@ -4,7 +4,7 @@ import ShapeBottom from "../Common/ShapeBottom";
 import Faq from "../Common/Faq";
 import Concept from "./Concept";
 import {
-  Images
+  Images, Icons,
 } from "../../utils/assets";
 import {
   HomeWrapper
@@ -25,6 +25,7 @@ const Startseite = (): JSX.Element => {
       description: `
         Hier finden Sie Antworten zu den Fragen<br />in Bezug auf Umtriebsentschädigungen ...
       `,
+      arrowIcon: Icons.ArrowDownLightBlueUrl
     },
 
     intro1: {

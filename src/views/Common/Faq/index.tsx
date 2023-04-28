@@ -25,8 +25,10 @@ const Faq = ({ data }: AccordionProps): JSX.Element => {
       <div className="content">
         <h1 dangerouslySetInnerHTML={{ __html: data.title }}>
         </h1>
-        <p dangerouslySetInnerHTML={{ __html: data.description }}>
-        </p>
+        {data.description&&
+          <p dangerouslySetInnerHTML={{ __html: data.description }}>
+          </p>
+        }
         <div className="accordion">
           {data.list.map((data, index) =>
             <div

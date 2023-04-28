@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const BannerWrapper = styled.section`
   position: relative;
   overflow: hidden;
+  height: 100vh;
   .bg {
     position: absolute;
     height: 100%;
@@ -19,24 +20,50 @@ export const BannerWrapper = styled.section`
       background-position: center center;
       background-size: 100% 100%;
       height: 100%;
-      width: 48%;
+      width: 50%;
     }
   }
 
   .content {
     margin: 0 ${props => props.theme.margins.primary}px;
-    padding-top: 200px;
+    
     position: relative;
     display: flex;
-    column-gap: 50px;
-    .summary {
-      flex: 0 1 35%;
-      padding-bottom: 100px;
+    height: 100%;
+    .qa {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 20px;
+      color: ${props => props.theme.colors.white};
+      bottom: 100px;
+      left: 10%;
 
+      > h2 {
+        font-weight: 700;
+        font-size: 45px;
+        color: ${props => props.theme.colors.white};
+      }
+      > p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+      }
+
+      .icon {
+        margin-top: 10px;
+      }
+    }
+    .summary {
+      width: 35%;
+      margin-left: 100px;
+      align-self: center;
+      margin-top: -100px;
       h2 {
         font-weight: 700;
         font-size: 45px;
-        line-height: 45px;
         color: ${props => props.theme.colors.white};
       }
       .desc {
@@ -93,25 +120,7 @@ export const BannerWrapper = styled.section`
         }
         
       }
-      .qa {
-        margin-top: 100px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        row-gap: 20px;
-        color: ${props => props.theme.colors.white};
-        margin-left: -20%;
-        p {
-          font-weight: 400;
-          font-size: 18px;
-          line-height: 22px;
-          text-align: center;
-        }
-
-        .icon {
-          margin-top: 10px;
-        }
-      }
+      
     }
 
     .cards {

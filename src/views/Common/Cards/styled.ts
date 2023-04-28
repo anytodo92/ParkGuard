@@ -4,7 +4,7 @@ export const CardsWrapper = styled.section`
   padding: 70px 0 60px;
   .content {
     margin: 0 ${props => props.theme.margins.primary}px;
-    padding: 0 20px;
+    padding: 0 100px;
     
     .list {
       display: grid;

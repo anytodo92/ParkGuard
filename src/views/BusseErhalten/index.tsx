@@ -1,6 +1,9 @@
 import Banner from "../Common/Banner";
 import Faq from "../Common/Faq";
 import {
+  Icons,
+} from "../../utils/assets";
+import {
   BusseErhaltenWrapper
 } from "./styled";
 
@@ -14,6 +17,14 @@ const BusseErhalten = (): JSX.Element => {
       placeholder: "Verstoss Nr. eingeben ...",
       buttonText: "Zur Busse",
     },
+    bottom: {
+      title: "Fragen?",
+      description: `
+        Hier finden Sie Antworten zu den Fragen<br />in Bezug auf Umtriebsentschädigungen ...
+      `,
+      arrowIcon: Icons.ArrowDownWhiteUrl
+    },
+
   };
   const accordionData = {
     title: "<p>FAQ Umtriebsentschädigung</p>",

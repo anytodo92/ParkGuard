@@ -6,7 +6,7 @@ export const ContactFormWrapper = styled.section`
 
   .content {
     margin: 0 ${props => props.theme.margins.primary}px;
-    padding: 0 20px;
+    padding: 0 100px;
   }
 
   .alert {
@@ -78,7 +78,7 @@ export const ContactFormWrapper = styled.section`
             background-color: ${props => props.theme.colors.white};
             border-radius: 15px;
             padding: 0 12px;
-            color: ${props => props.theme.colors.black_primary};
+            color: #777;
             margin-top: 5px;
           }
 
@@ -107,9 +107,9 @@ export const ContactFormWrapper = styled.section`
       font-size: 18px;
       line-height: 22px;
       color: ${props => props.theme.colors.white};
-      padding: 0 30px;
+      width: 200px;
       height: 42px;
-      border-radius: 42px;
+      border-radius: 15px;
       background-color: ${props => props.theme.colors.blue_primary};
       display: flex;
       justify-content: center;

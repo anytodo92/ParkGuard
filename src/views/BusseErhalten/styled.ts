@@ -6,15 +6,14 @@ export const BusseErhaltenWrapper = styled.div`
   }
 
   .banner {
-    .bg {
-      background-position: center 0;
-      .lt {
-        width: 90%;
-      }
-    }
     .content {
-      .summary {
-        flex: 0 1 65%;
+      .qa {
+        right: 15%;
+        left: unset;
+        bottom: unset;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: -50px;
       }
     }
   }

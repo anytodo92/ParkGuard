@@ -18,7 +18,7 @@ export const FaqWrapper = styled.section`
           content: '';
           position: absolute;
           display: inline-block;
-          bottom: 0;
+          top: 47px;
           left: 0;
           width: 70px;
           border-bottom: 4px solid ${props => props.theme.colors.blue_primary};
@@ -89,7 +89,7 @@ export const FaqWrapper = styled.section`
 
   @media (min-width: ${props => props.theme.breakpoints.desktop}) {
     .content {
-      width: 760px;
+      width: 780px;
       margin: 0 auto;
     }
   }
