@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ImpressumWrapper = styled.div`
+export const AgbWrapper = styled.div`
   .banner {
     height: auto;
     .summary {

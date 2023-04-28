@@ -1,17 +1,17 @@
 import Banner from "../Common/Banner";
-import {Images} from "../../utils/assets";
+import { Images } from "../../utils/assets";
 import {
-  DatenschutzWrapper
+  AgbWrapper
 } from "./styled";
 
-const Datenschutz = (): JSX.Element => {
+const Agb = (): JSX.Element => {
   const banner = {
-    title: "<p>Datenschutz</p>",
+    title: "<p>AGB</p>",    
   };
 
   return (
-    <DatenschutzWrapper>
-      <Banner data={banner} page="datenschutz" />
+    <AgbWrapper>
+      <Banner data={banner} page="agb" />
       <div className="rich-text">
         <div className="content">
           <div className="txt">
@@ -33,9 +33,9 @@ const Datenschutz = (): JSX.Element => {
             </p>
           </div>
         </div>
-      </div>
-    </DatenschutzWrapper>
+      </div>   
+    </AgbWrapper>
   );
 };
 
-export default Datenschutz;
+export default Agb;
