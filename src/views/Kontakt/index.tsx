@@ -17,10 +17,20 @@ const Kontakt = (): JSX.Element => {
 
     intro1: {
       title: "Mehr freie Parkplätze dank ParkGuard",
+      description: `
+      Durch ParkGuard kann das richterliche Parkverbot auf privatem Grund unkompliziert durchgesetzt werden.
+      <br /><br />
+      Unsere digitale Tool-Landschaft reduziert den Aufwand<br />
+      auf ein Minimum. Für alle administrativen Schritte sind<br />
+      wir für Sie da.
+      `
     },
 
     intro2: {
       title: "Keine Fixkosten",
+      description: `
+      Der Einsatz von ParkGuard ist für Sie kostenlos. Sie profitieren doppelt! Freie Parkplätze und zusätzliche Einnahmen durch die ausgestellten Umtriebsenschädigungen.
+      `,
     }
 
   };

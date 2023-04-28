@@ -4,7 +4,7 @@ export const SimpleTextWrapper = styled.section`
   padding: 70px 0;
   .content {
     margin: 0 ${props => props.theme.margins.primary}px;
-    padding: 0 20px;
+    padding: 0 100px;
     > h1 {
       > p {
         position: relative;

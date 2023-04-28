@@ -29,6 +29,16 @@ const Banner = ({ data, page }: BannerPropsType): JSX.Element => {
         </div>
       </div>
       <div className="content">
+        {data.bottom&&
+          <div className="qa">
+            <h2>{data.bottom.title}</h2>
+            <p dangerouslySetInnerHTML={{ __html: data.bottom.description }}>
+            </p>
+            <span className="icon">
+              <img src={data.bottom.arrowIcon} />
+            </span>
+          </div>
+        }
         <div className="summary">
           <h2 dangerouslySetInnerHTML={{ __html: data.title }}></h2>
           {data.description&&
@@ -40,17 +50,6 @@ const Banner = ({ data, page }: BannerPropsType): JSX.Element => {
               <button>{data.form.buttonText}</button>
             </div>
           }
-          {data.bottom&&
-            <div className="qa">
-              <h2>{data.bottom.title}</h2>
-              <p dangerouslySetInnerHTML={{ __html: data.bottom.description }}>
-              </p>
-              <span className="icon">
-                <img src={Icons.ArrowDownLightBlueUrl} />
-              </span>
-            </div>
-          }
-          
         </div>
 
         <div className="cards">

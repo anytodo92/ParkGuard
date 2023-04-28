@@ -6,6 +6,7 @@ type SimpleTextProps = {
   data: {
     title: string;
     description: string;
+    linkText?: string;
   }
 }
 

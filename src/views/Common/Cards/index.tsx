@@ -2,8 +2,13 @@ import {
   CardsWrapper
 } from "./styled";
 
+interface Card {
+  title: string;
+  description: string;
+  iconUrl: string;
+}
 type CardsProps = {
-  list: []
+  list: Card[]
 }
 
 const Cards = ({ list }: CardsProps): JSX.Element => {

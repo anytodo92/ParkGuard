@@ -6,7 +6,7 @@ export const ContactFormWrapper = styled.section`
 
   .content {
     margin: 0 ${props => props.theme.margins.primary}px;
-    padding: 0 20px;
+    padding: 0 100px;
   }
 
   .alert {
@@ -78,7 +78,7 @@ export const ContactFormWrapper = styled.section`
             background-color: ${props => props.theme.colors.white};
             border-radius: 15px;
             padding: 0 12px;
-            color: ${props => props.theme.colors.black_primary};
+            color: #777;
             margin-top: 5px;
           }
 
