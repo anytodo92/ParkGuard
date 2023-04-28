@@ -8,7 +8,7 @@ export const PaymentWrapper = styled.section`
     grid-template-columns: 1fr;
     column-gap: 20px;
     row-gap: 20px;
-    padding-top: 20px;
+    padding: 60px 70px 90px;
 
     .info {
       border: 2px solid ${props => props.theme.colors.blue_third};

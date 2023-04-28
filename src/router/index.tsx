@@ -18,7 +18,7 @@ const UnsereLosungPage = lazy(() => import("../views/UnsereLosung"));
 const KontaktPage = lazy(() => import("../views/Kontakt"));
 const ImpressumPage = lazy(() => import("../views/Impressum"));
 const DatenschutzPage = lazy(() => import("../views/Datenschutz"));
-const TempPage = lazy(() => import("../views/Temp"));
+const DetailPage = lazy(() => import("../views/Detail"));
 
 const Home = withLoading(HomePage);
 const BusseErhalten = withLoading(BusseErhaltenPage);
@@ -26,7 +26,7 @@ const UnsereLosung = withLoading(UnsereLosungPage);
 const Kontakt = withLoading(KontaktPage);
 const Impressum = withLoading(ImpressumPage);
 const Datenschutz = withLoading(DatenschutzPage);
-const Temp = withLoading(TempPage);
+const Detail = withLoading(DetailPage);
 
 const router = () => {
   return (
@@ -37,7 +37,7 @@ const router = () => {
           <Route path="/busse-erhalten" element={<BusseErhalten />} />
           <Route path="/unsere-losung" element={<UnsereLosung />} />
           <Route path="/kontakt" element={<Kontakt />} />
-          <Route path="/temp" element={<Temp />} />
+          <Route path="/detail" element={<Detail />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
         </Route>

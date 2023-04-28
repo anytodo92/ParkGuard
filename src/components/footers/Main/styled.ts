@@ -6,8 +6,8 @@ export const FooterWrapper = styled.footer`
   width: 100%;
   color: ${props => props.theme.colors.white};
   z-index: ${props => props.theme.zIndexes.footer_layout};
-  padding-top: 80px;
-  margin-top: -80px;
+  padding-top: 120px;
+  margin-top: -120px;
   .content {
     position: relative;
     margin: 0 ${props => props.theme.margins.primary}px;
@@ -15,9 +15,9 @@ export const FooterWrapper = styled.footer`
 
   .card {
     position: absolute;
-    bottom: -40px;
+    bottom: -70px;
     right: 100px;
-    padding: 40px 20px 70px;
+    padding: 40px 20px 130px;
     background: #FFFFFF;
     box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
     border-radius: 30px;
