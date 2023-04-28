@@ -23,7 +23,7 @@ const Footer = (): JSX.Element => {
             <h2>Rechtliches</h2>
             <p><a className="link" href="/impressum">Impressum</a></p>
             <p><a className="link" href="/datenschutz">Datenschutz</a></p>
-            <p>AGB</p>
+            <p><a className="link" href="/agb">AGB</a></p>
           </div>
         </div>
       </section>
