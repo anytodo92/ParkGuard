@@ -40,11 +40,12 @@ export const FaqWrapper = styled.section`
       flex-direction: column;
       row-gap: 20px;
       .one {
+        background-color: ${props => props.theme.colors.white};
+        border-radius: 15px;
         .title {
           display: flex;
           justify-content: space-between;
-          background-color: ${props => props.theme.colors.white};
-          border-radius: 15px;
+          
           padding: 15px 26px;
           align-items: center;
           cursor: pointer;
@@ -65,10 +66,11 @@ export const FaqWrapper = styled.section`
           font-weight: 400;
           font-size: 18px;
           line-height: 22px;
-          color: ${props => props.theme.colors.blue_primary};
+          color: #646464;
           height: 0;
           overflow: hidden;
           transition: all .5s ease;
+          padding: 0 40px 0px 40px;
         }
 
         &.opened {
@@ -79,7 +81,7 @@ export const FaqWrapper = styled.section`
           }
           .detail {
             height: auto;
-            padding-top: 20px;
+            padding-bottom: 20px;
           }
         }
       }
