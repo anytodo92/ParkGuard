@@ -126,7 +126,7 @@ export const FormWrapper = styled.section`
           .desc {
             color: #646464;
             font-weight: 700;
-            fonts-size: 18px;
+            font-size: 18px;
             line-height: 22px;
             margin-top: 20px;
           }
