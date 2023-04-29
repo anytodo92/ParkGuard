@@ -13,7 +13,7 @@ interface FaqData {
 type AccordionProps = {
   data: {
     title: string,
-    description: string,
+    description?: string,
     list: FaqData[],
   }
 }
