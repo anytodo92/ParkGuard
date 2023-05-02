@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ConceptWrapper = styled.section`
-  padding: 190px 0 120px;
+  padding: 90px 0 120px;
   .content {
     margin: 0 ${props => props.theme.margins.primary}px;
     > h1 {
