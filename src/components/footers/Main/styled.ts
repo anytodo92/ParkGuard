@@ -50,6 +50,7 @@ export const FooterWrapper = styled.footer`
       color: ${props => props.theme.colors.purple_primary};
       margin-top: 30px;
       cursor: pointer;
+      background-color: transparent;
     }
   }
 
@@ -77,6 +78,10 @@ export const FooterWrapper = styled.footer`
             color: ${props => props.theme.colors.white};
             &:nth-child(2) {
               margin-top: 17px;
+            }
+           > a {
+              color: ${props => props.theme.colors.white};
+              text-decoration: none;
             }
           }
         }

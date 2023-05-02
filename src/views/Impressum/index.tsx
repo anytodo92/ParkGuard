@@ -13,7 +13,7 @@ const Impressum = (): JSX.Element => {
   return (
     <ImpressumWrapper>
       <Banner data={banner} page="impressum" />
-      <div className="rich-text">
+      <section className="rich-text">
         <div className="content">
           <div className="txt">
             <p>
@@ -34,7 +34,7 @@ const Impressum = (): JSX.Element => {
             </p>
           </div>
         </div>
-      </div>   
+      </section>   
     </ImpressumWrapper>
   );
 };

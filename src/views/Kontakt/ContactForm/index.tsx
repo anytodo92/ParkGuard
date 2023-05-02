@@ -19,21 +19,21 @@ const ContactForm = (): JSX.Element => {
                   </div>
                 </div>
                 <div className="group">
-                  <label>Vorname / Nachname<sup>*</sup></label>
+                  <label>Vorname / Nachname <sup>*</sup></label>
                   <div className="form-group">
                     <label className="control-label"></label>
                     <input type="text" className="form-control" />
                   </div>
                 </div>
                 <div className="group">
-                  <label>E-Mail<sup>*</sup></label>
+                  <label>E-Mail <sup>*</sup></label>
                   <div className="form-group">
                     <label className="control-label"></label>
                     <input type="text" className="form-control" />
                   </div>
                 </div>
                 <div className="group">
-                  <label>Telefon<sup>*</sup></label>
+                  <label>Telefon <sup>*</sup></label>
                   <div className="form-group">
                     <label className="control-label"></label>
                     <input type="text" className="form-control" />
