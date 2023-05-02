@@ -6,7 +6,7 @@ const ContactForm = (): JSX.Element => {
   return (
     <ContactFormWrapper>
       <div className="content">
-        <h1><p>Kontakt & Terminvereinbarung</p></h1>
+        <h1><p>Hinterlassen Sie eine Nachricht</p></h1>
         <div className="yform">
           <form>
             <div className="form">

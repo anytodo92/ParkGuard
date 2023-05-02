@@ -21,11 +21,14 @@ export const KontaktWrapper = styled.div`
     }
   }
   .simple-text {
-    &:nth-of-type(2) {
-      padding-bottom: 0px!important;
+    .content {
+      padding: 0 120px!important;
     }
   }
   .cards {
+    .content {
+      padding: 0 120px!important;
+    }
     .list {
       .one {
         padding-bottom: 30px!important;

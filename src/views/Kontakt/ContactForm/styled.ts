@@ -6,7 +6,7 @@ export const ContactFormWrapper = styled.section`
 
   .content {
     margin: 0 ${props => props.theme.margins.primary}px;
-    padding: 0 100px;
+    padding: 0 120px 0 160px;
   }
 
   .alert {
@@ -83,8 +83,9 @@ export const ContactFormWrapper = styled.section`
           }
 
           textarea {
-            height: 308px;
+            height: 320px;
             padding: 15px;
+            max-width: 600px;
           }
         }
       }
@@ -130,7 +131,7 @@ export const ContactFormWrapper = styled.section`
     .yform {
       .form {
         row-gap: 13px;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 0.5fr 1fr;
         .col {
           row-gap: 13px;
           &:first-child {
