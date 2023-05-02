@@ -112,11 +112,26 @@ export const FormWrapper = styled.section`
               display: inline-flex;
               justify-content: center;
               align-items: center;
-              &.o-line {
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 22px;
+              cursor: pointer;
+            }
+            .file {
+              position: relative;
+              .form-group {
+                opacity: 0;
+              }
+              button {
+                position: absolute;
+                top: 0;
                 border: 1px solid ${props => props.theme.colors.blue_primary};
                 color: ${props => props.theme.colors.blue_primary};
+                background-color: transparent;
               }
-              &.blue {
+            }
+            .submit {
+              button {
                 background-color: ${props => props.theme.colors.blue_primary};
                 color: ${props => props.theme.colors.white};
               }

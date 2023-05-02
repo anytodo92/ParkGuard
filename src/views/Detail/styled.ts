@@ -2,19 +2,19 @@ import styled from "styled-components";
 
 export const DetailWrapper = styled.div`
   .banner {
-    height: auto;
+    height: auto!important;
     .bg {
-      background-position: center 0;
+      background-position: center 0!important;
     }
     .content {
       .summary {
-        margin-top: 200px;
-        margin-left: 75px;
-        padding-bottom: 50px;
+        margin-top: 200px!important;
+        margin-left: 75px!important;
+        padding-bottom: 50px!important;
       }
     }
   }
   .accordion {
-    padding-top: 55px;
+    padding-top: 55px!important;
   }
 `

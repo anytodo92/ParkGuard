@@ -111,8 +111,16 @@ const Form = (): JSX.Element => {
                 </div>
                 <div className="desc">Anhang (z.B. Rechung / Parkerlaubnis / etc.)</div>
                 <div className="func">
-                  <button className="o-line">Datei auswählen</button>
-                  <button className="blue">Absenden</button>
+                  <div className="file">
+                    <div className="form-group">
+                      <label className="control-label"></label>
+                      <input type="file" className="form-control" />
+                    </div>
+                    <button>Datei auswählen</button>
+                  </div>
+                  <div className="submit">
+                    <button>Absenden</button>
+                  </div>
                 </div>
               </form>
             </div>
@@ -212,7 +220,9 @@ const Form = (): JSX.Element => {
                 </div>
                 <div className="desc">Anhang (z.B. Rechung / Parkerlaubnis / etc.)</div>
                 <div className="func">
+                  <div className="submit">
                   <button className="blue">Absenden</button>
+                  </div>
                 </div>
               </form>
             </div>

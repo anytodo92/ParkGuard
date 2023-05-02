@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const ImpressumWrapper = styled.div`
   .banner {
-    height: auto;
+    height: auto!important;
     .summary {
-      margin-top: 200px;
-      margin-left: 80px;
-      padding-bottom: 100px;
+      margin-top: 200px!important;
+      margin-left: 80px!important;
+      padding-bottom: 100px!important;
     }
   }
   .rich-text {

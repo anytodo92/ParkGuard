@@ -152,6 +152,7 @@ export const BannerWrapper = styled.section`
         color: ${props => props.theme.colors.purple_primary};
         margin-top: 30px;
         cursor: pointer;
+        background-color: transparent;
       }
 
       .card1 {

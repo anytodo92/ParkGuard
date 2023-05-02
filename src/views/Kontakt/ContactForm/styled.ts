@@ -116,6 +116,8 @@ export const ContactFormWrapper = styled.section`
       align-items: center;
       cursor: pointer;
       text-decoration: none;
+      border: 0;
+      outline: 0;
     }
   }
 
