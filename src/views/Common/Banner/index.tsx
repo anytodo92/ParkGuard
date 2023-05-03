@@ -11,21 +11,19 @@ type BannerPropsType = {
 const Banner = ({ data, page }: BannerPropsType): JSX.Element => {
   return (
     <BannerWrapper className={`banner ${page}`}>
-      <div
-        className="bg"
-        style={{
-          backgroundImage: `url(${Images.LightBlueBgUrl})`
-        }}
-      >
-        <div
-          className="lt"
-          style={{
-            backgroundImage: `url(${Images.BlueBgUrl})`
-          }}
-        >
+      <div className="bg">
+        <div className="lt">
+          <div className="shape-bot" style={{ backgroundColor: "transparent", transform: 'rotateY(180deg)' }}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" width="100%" height="40px">
+              <path className="elementor-shape-fill" d="M0,6V0h1000v100L0,6z" fill="#00003A"></path>
+            </svg>
+          </div>
         </div>
-        <div className="rt">
-          
+        <div className="rt"></div>
+        <div className="shape-bot" style={{ backgroundColor: "transparent", transform: 'rotateY(180deg)' }}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" width="100%" height="40px">
+            <path className="elementor-shape-fill" d="M0,6V0h1000v100L0,6z" fill="#5C8BBF"></path>
+          </svg>
         </div>
       </div>
       <div className="content">

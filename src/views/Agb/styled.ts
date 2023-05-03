@@ -2,13 +2,24 @@ import styled from "styled-components";
 
 export const AgbWrapper = styled.div`
   .banner {
-    height: auto;
-    .summary {
-      margin-top: 200px;
-      margin-left: 80px;
-      padding-bottom: 100px;
+    .bg {
+      .lt {
+        height: 100%;
+      }
+      > .shape-bot {
+        display: none;
+      }
     }
-  }
+    .content {
+      .summary {
+        padding-bottom: 100px;
+        margin-top: 130px;
+      }
+      .cards {
+        display: none;
+      }
+    }
+  } 
   .rich-text {
     background-color: ${props => props.theme.colors.white};
 
@@ -29,7 +40,18 @@ export const AgbWrapper = styled.div`
     }
   }
   
-
+  @media(min-width: ${props => props.theme.breakpoints.desktop}) {
+    .banner {
+      height: auto;
+      .content {
+        .summary {
+          margin-top: 200px;
+          margin-left: 80px;
+          padding-bottom: 100px;
+        }
+      }
+    }
+  }
 
   @media (min-width: ${props => props.theme.breakpoints.desktop_ml}) {
     .rich-text {

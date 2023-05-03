@@ -1,14 +1,25 @@
 import styled from "styled-components";
 
-export const DatenschutzWrapper = styled.div`  
+export const DatenschutzWrapper = styled.div` 
   .banner {
-    height: auto;
-    .summary {
-      margin-top: 200px;
-      margin-left: 80px;
-      padding-bottom: 100px;
+    .bg {
+      .lt {
+        height: 100%;
+      }
+      > .shape-bot {
+        display: none;
+      }
     }
-  }
+    .content {
+      .summary {
+        padding-bottom: 100px;
+        margin-top: 130px;
+      }
+      .cards {
+        display: none;
+      }
+    }
+  } 
   .rich-text {
     background-color: ${props => props.theme.colors.white};
 
@@ -25,6 +36,19 @@ export const DatenschutzWrapper = styled.div`
       font-weight: 700;
       strong {
         font-weight: 700;
+      }
+    }
+  }
+
+  @media(min-width: ${props => props.theme.breakpoints.desktop}) {
+    .banner {
+      height: auto;
+      .content {
+        .summary {
+          margin-top: 200px;
+          margin-left: 80px;
+          padding-bottom: 100px;
+        }
       }
     }
   }

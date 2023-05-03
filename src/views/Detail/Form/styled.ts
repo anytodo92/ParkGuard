@@ -3,11 +3,10 @@ import styled from "styled-components";
 export const FormWrapper = styled.section`
 
   background-color: ${props => props.theme.colors.blue_third};
-  padding-bottom: 150px;
+  padding-bottom: 70px;
   .content {
     margin: 0 ${props => props.theme.margins.primary}px;
-    padding: 0 70px;
-
+    
     .tabbar {
       list-style: none;
       display: flex;
@@ -151,7 +150,7 @@ export const FormWrapper = styled.section`
       #submit_opinion {
         .yform {
           .form {
-            grid-template-columns: 0.8fr 0.8fr 1fr;
+            grid-template-columns: 1fr;
 
             textarea {
               height: 230px!important;
@@ -159,20 +158,63 @@ export const FormWrapper = styled.section`
           }
           .func {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            row-gap: 30px;
           }
         }
       }
       #order_payment {
-        padding: 40px 300px 0;
+        padding: 40px 0 0;
         .yform {
 
           .form {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
           }
           .func {
             display: flex;
             justify-content: flex-start;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.tablet_md}) {
+    .content {
+      .tab-content {
+        #submit_opinion {
+          .yform {
+            .func {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.desktop}) {
+    padding-bottom: 150px;
+    .content {
+      padding: 0 70px;
+
+      .tab-content {
+        #submit_opinion {
+          .yform {
+            .form {
+              grid-template-columns: 0.8fr 0.8fr 1fr;
+            }
+          }
+        }
+        #order_payment {
+          padding: 40px 300px 0;
+          .yform {
+
+            .form {
+              grid-template-columns: 1fr 1fr;
+            }
           }
         }
       }

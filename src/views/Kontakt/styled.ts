@@ -2,36 +2,75 @@ import styled from "styled-components";
 
 export const KontaktWrapper = styled.div`
   .banner {
-    height: auto!important;
     .bg {
       .lt {
-        width: 48%!important;
+        height: 100%;
+      }
+      > .shape-bot {
+        display: none;
       }
     }
-    .summary {
-      padding-bottom: 170px!important;
-      margin-left: 40px!important;
-      margin-top: 200px!important;
-    }
-    .cards {
-      .card1 {
-        right: 30%;
-        padding-bottom: 150px!important;
+    .content {
+      .summary {
+        padding-bottom: 100px;
+        margin-top: 130px;
+      }
+      .cards {
+        display: none;
       }
     }
+    
   }
   .simple-text {
+    &:nth-of-type(2) {
+      padding-bottom: 0px;
+    }
     .content {
-      padding: 0 120px!important;
+      padding: 0;
     }
   }
   .cards {
     .content {
-      padding: 0 120px!important;
+      padding: 0;
     }
     .list {
       .one {
-        padding-bottom: 30px!important;
+        padding-bottom: 30px;
+      }
+    }
+  }
+
+  @media(min-width: ${props => props.theme.breakpoints.desktop}) {
+    .banner {
+      height: auto;
+      .bg {
+        .lt {
+          width: 48%;
+        }
+      }
+      .content {
+        .summary {
+          padding-bottom: 170px;
+          margin-left: 40px;
+          margin-top: 200px;
+        }
+        .cards {
+          display: block;
+          .card1 {
+            right: 30%;
+            padding-bottom: 150px;
+          }
+        }
+      }
+    }
+    .simple-text {
+      .content {
+        padding: 0 120px;
+      }
+    }
+    .cards {
+      .content {
+        padding: 0 120px;
       }
     }
   }

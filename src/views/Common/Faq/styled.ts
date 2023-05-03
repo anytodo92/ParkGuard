@@ -10,15 +10,15 @@ export const FaqWrapper = styled.section`
       > p {
         position: relative;
         font-weight: 700;
-        font-size: 45px;
-        line-height: 49px;
+        font-size: 29px;
+        line-height: 34px;
         color: ${props => props.theme.colors.blue_primary};
         padding-bottom: 3px;
         &:after {
           content: '';
           position: absolute;
           display: inline-block;
-          top: 47px;
+          top: 32px;
           left: 0;
           width: 70px;
           border-bottom: 4px solid ${props => props.theme.colors.blue_primary};
@@ -28,8 +28,8 @@ export const FaqWrapper = styled.section`
 
     > p {
       font-weight: 700;
-      font-size: 18px;
-      line-height: 22px;
+      font-size: 16px;
+      line-height: 20px;
       color: ${props => props.theme.colors.blue_primary};
       margin-top: 20px;
     }
@@ -52,20 +52,21 @@ export const FaqWrapper = styled.section`
           > h5 {
             color: ${props => props.theme.colors.blue_primary};
             font-weight: 400;
-            font-size: 18px;
-            line-height: 22px;
+            font-size: 16px;
+            line-height: 20px;
           }
 
           > span {
             transition: all .5s ease;
+            flex-shrink: 0;
           }
           
         }
 
         .detail {
           font-weight: 400;
-          font-size: 18px;
-          line-height: 22px;
+          font-size: 16px;
+          line-height: 20px;
           color: #646464;
           height: 0;
           overflow: hidden;
@@ -93,6 +94,36 @@ export const FaqWrapper = styled.section`
     .content {
       width: 780px;
       margin: 0 auto;
+
+      > h1 {
+        > p {
+          font-size: 45px;
+          line-height: 49px;
+          &:after {
+            top: 47px;
+          }
+        }
+      }
+
+      > p {
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      .accordion {
+        .one {
+          .title {
+            > h5 {
+              font-size: 18px;
+              line-height: 22px;
+            }
+          }
+          .detail {
+            font-size: 18px;
+            line-height: 22px;
+          }
+        }
+      }
     }
   }
 `

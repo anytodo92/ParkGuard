@@ -6,12 +6,13 @@ export const ConceptWrapper = styled.section`
     margin: 0 ${props => props.theme.margins.primary}px;
     > h1 {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
+      padding: 0 25px;
       > p {
         position: relative;
         font-weight: 700;
-        font-size: 45px;
-        line-height: 49px;
+        font-size: 30px;
+        line-height: 34px;
         color: ${props => props.theme.colors.blue_primary};
         padding-bottom: 3px;
         &:after {
@@ -35,19 +36,19 @@ export const ConceptWrapper = styled.section`
       .one {
         border: 2px solid ${props => props.theme.colors.blue_third};
         border-radius: 30px;
-        padding: 30px 47px 50px 35px;
+        padding: 30px 25px;
 
         > h2 {
           font-weight: 700;
           font-size: 30px;
-          line-height: 36px;
+          line-height: 34px;
           color: ${props => props.theme.colors.blue_primary};
         }
 
         > p {
           font-weight: 400;
-          font-size: 18px;
-          line-height: 22px;
+          font-size: 16px;
+          line-height: 20px;
           color: ${props => props.theme.colors.blue_primary};
           margin-top: 20px;
         }
@@ -55,7 +56,7 @@ export const ConceptWrapper = styled.section`
     }
     .func {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       margin-top: 35px;
       a {
         font-weight: 700;
@@ -85,8 +86,26 @@ export const ConceptWrapper = styled.section`
 
   @media (min-width: ${props => props.theme.breakpoints.desktop}) {
     .content {
+      > h1 {
+        justify-content: center;
+        > p {
+          font-size: 45px;
+          line-height: 49px;
+          padding: 0;
+        }
+      }
       .list {
-        grid-template-columns: 1fr 1fr 1fr
+        grid-template-columns: 1fr 1fr 1fr;
+        .one {
+          padding: 30px 47px 50px 35px;
+          > p {
+            font-size: 18px;
+            line-height: 22px;
+          }
+        }
+      }
+      .func {
+        justify-content: center;
       }
     }
   }

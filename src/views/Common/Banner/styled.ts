@@ -1,26 +1,34 @@
 import styled from "styled-components";
-
+import { Images } from "../../../utils/assets";
 
 export const BannerWrapper = styled.section`
   position: relative;
-  overflow: hidden;
-  height: 100vh;
+  height: auto;
   .bg {
     position: absolute;
     height: 100%;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    background-image: url(${Images.LightBlueBgMobileUrl});
     left: 0;
     top: 0;
     width: 100%;
 
     .lt {
+      position: relative;
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 100% 100%;
-      height: 100%;
-      width: 50%;
+      background-image: url(${Images.BlueBgMobileUrl});
+      height: 58%;
+      width: 100%;
+    }
+
+    .shape-bot {
+      position: absolute;
+      bottom: -39px;
+      width: 100%;
     }
   }
 
@@ -29,7 +37,8 @@ export const BannerWrapper = styled.section`
     
     position: relative;
     display: flex;
-    height: 100%;
+    flex-direction: column;
+    
     .qa {
       position: absolute;
       display: flex;
@@ -37,18 +46,19 @@ export const BannerWrapper = styled.section`
       align-items: center;
       row-gap: 20px;
       color: ${props => props.theme.colors.white};
-      bottom: 100px;
-      left: 10%;
-
+      width: 100%;
+      left: 50%;
+      top: 38%;
+      transform: translate(-50%, -50%);
       > h2 {
         font-weight: 700;
-        font-size: 45px;
+        font-size: 35px;
         color: ${props => props.theme.colors.white};
       }
       > p {
         font-weight: 400;
-        font-size: 18px;
-        line-height: 22px;
+        font-size: 16px;
+        line-height: 20px;
         text-align: center;
       }
 
@@ -57,20 +67,21 @@ export const BannerWrapper = styled.section`
       }
     }
     .summary {
-      width: 35%;
-      margin-left: 100px;
-      align-self: center;
-      margin-top: -100px;
+      width: 100%;
+      
+      margin-top: 200px;
+      padding-bottom: 390px;
       h2 {
         font-weight: 700;
-        font-size: 45px;
+        font-size: 36px;
+        line-height: 40px;
         color: ${props => props.theme.colors.white};
       }
       .desc {
         margin-top: 30px;
         font-weight: 400;
-        font-size: 18px;
-        line-height: 22px;
+        font-size: 16px;
+        line-height: 20px;
         color: ${props => props.theme.colors.white};
       }
       .form {
@@ -79,23 +90,24 @@ export const BannerWrapper = styled.section`
         column-gap: 10px;
         margin-top: 30px;
         button, input {
+          
           outline: 0;
           border: 0;
           height: 45px;
           border-radius: 45px;
           font-weight: 700;
-          font-size: 20px;
-          line-height: 24px;
+          font-size: 18px;
+          line-height: 22px;
           cursor: pointer;
         }
 
         input {
-          width: 315px;
+          flex: 1;
           color: ${props => props.theme.colors.white};
           background-color: ${props => props.theme.colors.blue_second};
           display: flex;
           align-items: center;
-          padding-left: 30px;
+          padding-left: 20px;
          
           &::placeholder {
             color: ${props => props.theme.colors.white};
@@ -111,7 +123,9 @@ export const BannerWrapper = styled.section`
           }
         }
         button {
+          flex: 0.7;
           width: 130px;
+          min-width: 100px;
           background-color: ${props => props.theme.colors.white};
           color: ${props => props.theme.colors.purple_primary};
           display: flex;
@@ -126,16 +140,17 @@ export const BannerWrapper = styled.section`
     .cards {
       flex: 1;
       position: relative;
+      padding-bottom: 70px;
       h2 {
         font-weight: 700;
-        font-size: 40px;
-        line-height: 40px;
+        font-size: 30px;
+        line-height: 30px;
         color: ${props => props.theme.colors.purple_primary};
       }
       p {
         font-weight: 400;
-        font-size: 18px;
-        line-height: 22px;
+        font-size: 16px;
+        line-height: 20px;
         color: ${props => props.theme.colors.purple_primary};
         margin-top: 30px;
       }
@@ -156,31 +171,154 @@ export const BannerWrapper = styled.section`
       }
 
       .card1 {
-        position: absolute;
-        bottom: -30px;
-        right: 10%;
-        padding: 40px 20px 170px;
+        
+        padding: 40px 20px;
         background: linear-gradient(180.39deg, #FFFFFF 27.72%, #ACCBEE 99.66%);
         box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
         border-radius: 30px;
-        transform: rotate(-6.76deg);
-        width: 534px;
+        
+        margin-top: -150px;
 
-        .func {
-          padding-bottom: 130px;
-        }
+        
       }
 
       .card2 {
-        position: absolute;
-        bottom: -50px;
-        right: 0;
-        padding: 40px 20px 70px;
+        
+        padding: 40px 20px;
         background: linear-gradient(178.74deg, #FFFFFF 6.9%, #BED7F2 140.8%);
         box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.25);
         border-radius: 30px;
-        transform: rotate(6.76deg);
-        width: 380px;
+        margin-top: 25px;
+        
+      }
+    }
+  }
+
+  @media(min-width: ${props => props.theme.breakpoints.desktop}) {
+    height: 100vh;
+    overflow: hidden;
+  
+    .bg {
+      position: absolute;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-image: url(${Images.LightBlueBgUrl});
+      left: 0;
+      top: 0;
+      width: 100%;
+
+      .lt {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100% 100%;
+        background-image: url(${Images.BlueBgUrl});
+        height: 100%;
+        width: 50%;
+
+      }
+
+      .shape-bot {
+        display: none;
+      }
+    }
+    .content {
+      flex-direction: row;
+      height: 100%;
+
+      .qa {
+        position: absolute;
+        bottom: 100px;
+        left: 10%;
+        top: unset;
+        width: auto;
+        transform: unset;
+
+        > h2 {
+          font-size: 45px;
+        }
+        > p {
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
+
+      .summary {
+        width: 35%;
+        margin-top: -100px;
+        align-self: center;
+        margin-left: 100px;
+        padding-bottom: 0;
+
+        h2 {
+          font-size: 45px;
+          line-height: 45px;
+        }
+
+        .desc {
+          font-size: 18px;
+          line-height: 22px;
+        }
+        .form {
+          input, button {
+            flex: unset;
+            font-size: 20px;
+            line-height: 24px;
+          }
+          input {
+            width: 315px;
+            padding-left: 30px;
+          }
+        }
+      }
+
+      .cards {
+        padding-bottom: 0;
+       
+        .card1 {
+          position: absolute;
+          bottom: -30px;
+          right: 10%;
+          transform: rotate(-6.76deg);
+          padding: 40px 20px 170px;
+          width: 434px;
+          margin-top: 0;
+          .func {
+            padding-bottom: 130px;
+          }
+        }
+        .card2 {
+          position: absolute;
+          bottom: -50px;
+          right: 0;
+          transform: rotate(6.76deg);
+          padding: 40px 20px 70px;
+          width: 280px;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  @media(min-width: ${props => props.theme.breakpoints.desktop_lg}) {
+    .content {
+      .cards {
+        h2 {
+          font-size: 40px;
+          line-height: 40px;
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 22px;
+        }
+        .card1 {
+          width: 534px;
+        }
+        .card2 {
+          width: 380px;
+        }
       }
     }
   }

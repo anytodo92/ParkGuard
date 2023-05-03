@@ -1,14 +1,17 @@
 import styled from "styled-components";
 
 export const PaymentWrapper = styled.section`
+  .mt-15 {
+    margin-top: 15px;
+  }
   .content {
     margin: 0 ${props => props.theme.margins.primary}px;
 
     display: grid;
     grid-template-columns: 1fr;
     column-gap: 20px;
-    row-gap: 20px;
-    padding: 60px 70px 90px;
+    row-gap: 50px;
+    padding: 60px 0;
 
     .info {
       border: 2px solid ${props => props.theme.colors.blue_third};
@@ -58,7 +61,9 @@ export const PaymentWrapper = styled.section`
       .func {
         display: flex;
         align-items: center;
+        flex-direction: column;
         column-gap: 25px;
+        row-gap: 25px;
         margin-top: 50px;
         a {
           border: 0;
@@ -78,11 +83,22 @@ export const PaymentWrapper = styled.section`
     }
   }
 
+  @media (min-width: ${props => props.theme.breakpoints.tablet_md}) {
+    .content {
+      .desc {
+        .func {
+          flex-direction: row;
+        }
+      }
+    }
+  }
+
   @media (min-width: ${props => props.theme.breakpoints.desktop}) {
     .content {
+      padding: 60px 70px 90px;
       grid-template-columns: 1fr 1fr;
       .info {
-        flex-direction: row;
+        
       }
     }
   }
@@ -91,6 +107,10 @@ export const PaymentWrapper = styled.section`
     .content {
       width: ${props => props.theme.maxWidth}px;
       margin: 0 auto;
+
+      .info {
+        flex-direction: row;
+      }
     }
   }
 `
