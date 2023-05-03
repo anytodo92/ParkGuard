@@ -18,7 +18,7 @@ export const FaqWrapper = styled.section`
           content: '';
           position: absolute;
           display: inline-block;
-          top: 32px;
+          bottom: 0;
           left: 0;
           width: 70px;
           border-bottom: 4px solid ${props => props.theme.colors.blue_primary};
