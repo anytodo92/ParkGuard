@@ -4,21 +4,20 @@ export const PaymentWrapper = styled.section`
   .mt-15 {
     margin-top: 15px;
   }
+
+  padding: 80px 0 60px; 
   .content {
     margin: 0 ${props => props.theme.margins.primary}px;
 
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column-reverse;
     column-gap: 20px;
-    row-gap: 50px;
-    padding: 60px 0;
-
+    row-gap: 30px;
+    
     .info {
-      border: 2px solid ${props => props.theme.colors.blue_third};
-      border-radius: 15px;
-      padding: 20px;
+      flex: 1;
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
       row-gap: 20px;
       .detail {
         flex: 1;
@@ -50,6 +49,7 @@ export const PaymentWrapper = styled.section`
       }
     }
     .desc {
+      flex: 1;
       padding-top: 25px;
       > p {
         font-weight: 700;
@@ -66,10 +66,10 @@ export const PaymentWrapper = styled.section`
         row-gap: 25px;
         margin-top: 50px;
         a {
-          border: 0;
+          width: 100%;
+          
           outline: 0;
-          color: ${props => props.theme.colors.white};
-          background-color: ${props => props.theme.colors.blue_primary};
+          
           padding: 0 30px;
           font-weight: 700;
           font-size: 16px;
@@ -78,27 +78,39 @@ export const PaymentWrapper = styled.section`
           align-items: center;
           height: 45px;
           border-radius: 15px;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+
+          &.o-line {
+            border: 1px solid ${props => props.theme.colors.blue_primary};
+            color: ${props => props.theme.colors.blue_primary};
+          }
+
+          &.blue {
+            border: 0;
+            color: ${props => props.theme.colors.white};
+            background-color: ${props => props.theme.colors.blue_primary};
+          }
         }
       }
     }
   }
 
-  @media (min-width: ${props => props.theme.breakpoints.tablet_md}) {
-    .content {
-      .desc {
-        .func {
-          flex-direction: row;
-        }
-      }
-    }
-  }
 
   @media (min-width: ${props => props.theme.breakpoints.desktop}) {
     .content {
       padding: 60px 70px 90px;
-      grid-template-columns: 1fr 1fr;
+      flex-direction: row;
       .info {
-        
+        border: 2px solid ${props => props.theme.colors.blue_third};
+        border-radius: 15px;
+        padding: 20px;
+      }
+      .desc {
+        .func {
+          flex-direction: row;
+        }
       }
     }
   }

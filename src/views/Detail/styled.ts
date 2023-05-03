@@ -12,7 +12,7 @@ export const DetailWrapper = styled.div`
     }
     .content {
       .summary {
-        padding-bottom: 100px;
+        padding-bottom: 40px;
         margin-top: 130px;
       }
       .cards {
