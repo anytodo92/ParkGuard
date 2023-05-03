@@ -9,12 +9,7 @@ export const BusseErhaltenWrapper = styled.div`
   .banner {
     .bg {
       .lt {
-        background-image: none;
-        background-color: #00003A;
-        height: 100%;
-      }
-      > .shape-bot {
-        display: none;
+        height: 58%;
       }
     }
     .content {
@@ -24,7 +19,7 @@ export const BusseErhaltenWrapper = styled.div`
       }
       .qa {
         top: unset;
-        bottom: 90px;
+        bottom: 50px;
         transform: translate(-50%);
       }
       .cards {
@@ -38,8 +33,6 @@ export const BusseErhaltenWrapper = styled.div`
       .bg {
         .lt {
           height: 100%;
-          background-image: url(${Images.BlueBgUrl});
-          background-color: transparent;
         }
       }
       .content {
