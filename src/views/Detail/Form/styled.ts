@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const FormWrapper = styled.section`
-
   background-color: ${props => props.theme.colors.blue_third};
   padding-bottom: 70px;
   .content {
@@ -11,18 +10,31 @@ export const FormWrapper = styled.section`
       list-style: none;
       display: flex;
       justify-content: center;
-      column-gap: 40px;
+      padding: 0;
       > li {
         font-weight: 500;
-        font-size: 24px;
-        line-height: 36px;
-        color: #646464;
+        font-size: 16px;
+        line-height: 18px;
+        color: #9D9D9D;
         padding: 0 5px;
         cursor: pointer;
+        width: 166px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: ${props => props.theme.colors.white};
+        &:first-child {
+          border-radius: 15px 0 0 15px;
+        }
+        &:last-child {
+          border-radius: 0px 15px 15px 0px;
+        }
         &.sel {
           font-weight: 700;
-          color: ${props => props.theme.colors.blue_primary};
-          border-bottom: 2px solid ${props => props.theme.colors.blue_primary};
+          color: ${props => props.theme.colors.white};
+          background-color: ${props => props.theme.colors.blue_primary};
         }
       }
     }
@@ -52,6 +64,7 @@ export const FormWrapper = styled.section`
           .form {
             display: grid;
             column-gap: 27px;
+            row-gap: 10px;
             .col {
               display: flex;
               flex-direction: column;
@@ -103,7 +116,7 @@ export const FormWrapper = styled.section`
           .func {
             margin-top: 10px;
             button {
-              width: 200px;
+              width: 100%;
               height: 45px;
               border-radius: 15px;
               border: 0;
@@ -120,10 +133,9 @@ export const FormWrapper = styled.section`
               position: relative;
               .form-group {
                 opacity: 0;
+                position: absolute;
               }
               button {
-                position: absolute;
-                top: 0;
                 border: 1px solid ${props => props.theme.colors.blue_primary};
                 color: ${props => props.theme.colors.blue_primary};
                 background-color: transparent;
@@ -159,7 +171,7 @@ export const FormWrapper = styled.section`
           .func {
             display: flex;
             flex-direction: column;
-            row-gap: 30px;
+            row-gap: 15px;
           }
         }
       }
@@ -172,28 +184,13 @@ export const FormWrapper = styled.section`
           }
           .func {
             display: flex;
-            justify-content: flex-start;
+            flex-direction: column;
           }
         }
       }
     }
   }
 
-  @media (min-width: ${props => props.theme.breakpoints.tablet_md}) {
-    .content {
-      .tab-content {
-        #submit_opinion {
-          .yform {
-            .func {
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-            }
-          }
-        }
-      }
-    }
-  }
 
   @media (min-width: ${props => props.theme.breakpoints.desktop}) {
     padding-bottom: 150px;
@@ -206,6 +203,13 @@ export const FormWrapper = styled.section`
             .form {
               grid-template-columns: 0.8fr 0.8fr 1fr;
             }
+            .func {
+              flex-direction: row;
+              justify-content: space-between;
+              button {
+                width: 200px;
+              }
+            }
           }
         }
         #order_payment {
@@ -214,6 +218,12 @@ export const FormWrapper = styled.section`
 
             .form {
               grid-template-columns: 1fr 1fr;
+            }
+            .func {
+              flex-direction: row;
+              button {
+                width: 200px;
+              }
             }
           }
         }
