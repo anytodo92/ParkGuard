@@ -44,7 +44,7 @@ const theme: DefaultTheme = {
     full_menu: 90,
   },
   margins: {
-    primary: 25,
+    primary: 20,
     secondary: 15,
   },
 };

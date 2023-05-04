@@ -1,4 +1,5 @@
 import { Images, Icons } from "../../../utils/assets";
+import { Link } from "react-router-dom";
 import {
   BannerWrapper
 } from "./styled";
@@ -11,21 +12,19 @@ type BannerPropsType = {
 const Banner = ({ data, page }: BannerPropsType): JSX.Element => {
   return (
     <BannerWrapper className={`banner ${page}`}>
-      <div
-        className="bg"
-        style={{
-          backgroundImage: `url(${Images.LightBlueBgUrl})`
-        }}
-      >
-        <div
-          className="lt"
-          style={{
-            backgroundImage: `url(${Images.BlueBgUrl})`
-          }}
-        >
+      <div className="bg">
+        <div className="lt">
+          <div className="shape-bot" style={{ backgroundColor: "transparent", transform: 'rotateY(180deg)' }}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" width="100%" height="40px">
+              <path className="elementor-shape-fill" d="M0,6V0h1000v100L0,6z" fill="#00003A"></path>
+            </svg>
+          </div>
         </div>
-        <div className="rt">
-          
+        <div className="rt"></div>
+        <div className="shape-bot" style={{ backgroundColor: "transparent", transform: 'rotateY(180deg)' }}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" width="100%" height="40px">
+            <path className="elementor-shape-fill" d="M0,6V0h1000v100L0,6z" fill="#5C8BBF"></path>
+          </svg>
         </div>
       </div>
       <div className="content">
@@ -46,8 +45,12 @@ const Banner = ({ data, page }: BannerPropsType): JSX.Element => {
           }
           {(data.form)&&
             <div className="form">
-              <input placeholder={data.form.placeholder} />
-              <button>{data.form.buttonText}</button>
+              <form method="get" action="/detail" enctype="application/x-www-from-urlencoded">
+                <div className="wrapper">
+                  <input name="v" placeholder={data.form.placeholder} />
+                  <button type="submit">{data.form.buttonText}</button>
+                </div>
+              </form>
             </div>
           }
         </div>
@@ -63,7 +66,7 @@ const Banner = ({ data, page }: BannerPropsType): JSX.Element => {
                 }
                 {data.intro1.buttonText&&
                   <div className="func">
-                    <button>{data.intro1.buttonText}</button>
+                    <Link to={data.intro1.buttonUrl}>{data.intro1.buttonText}</Link>
                   </div>
                 }
               </div>
@@ -75,7 +78,7 @@ const Banner = ({ data, page }: BannerPropsType): JSX.Element => {
                 }
                 {data.intro2.buttonText&&
                   <div className="func">
-                    <button>{data.intro2.buttonText}</button>
+                    <Link to={data.intro2.buttonUrl}>{data.intro2.buttonText}</Link>
                   </div>
                 }
               </div>

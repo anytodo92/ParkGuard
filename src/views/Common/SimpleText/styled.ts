@@ -4,13 +4,13 @@ export const SimpleTextWrapper = styled.section`
   padding: 70px 0;
   .content {
     margin: 0 ${props => props.theme.margins.primary}px;
-    padding: 0 100px;
+    padding: 0;
     > h1 {
       > p {
         position: relative;
         font-weight: 700;
-        font-size: 45px;
-        line-height: 49px;
+        font-size: 30px;
+        line-height: 34px;
         color: ${props => props.theme.colors.blue_primary};
         padding-bottom: 3px;
         &:after {
@@ -27,8 +27,8 @@ export const SimpleTextWrapper = styled.section`
 
     > p {
       font-weight: 700;
-      font-size: 18px;
-      line-height: 22px;
+      font-size: 16px;
+      line-height: 20px;
       color: ${props => props.theme.colors.blue_primary};
       margin-top: 20px;
       max-width: 810px;
@@ -48,6 +48,25 @@ export const SimpleTextWrapper = styled.section`
       cursor: pointer;
       text-decoration: none;
       margin-top: 40px;
+    }
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.desktop}) {
+    .content {
+      padding: 0 100px;
+      > h1 {
+        > p {
+          font-size: 45px;
+          line-height: 49px;
+          &:after {
+
+          }
+        }
+      }
+      > p {
+        font-size: 18px;
+        line-height: 22px;
+      }
     }
   }
 

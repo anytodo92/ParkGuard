@@ -1,19 +1,17 @@
 import styled from "styled-components";
 
-export const FooterWrapper = styled.footer`
-  
+export const FooterWrapper = styled.footer`  
   overflow: hidden;
   width: 100%;
   color: ${props => props.theme.colors.white};
   z-index: ${props => props.theme.zIndexes.footer_layout};
-  padding-top: 120px;
-  margin-top: -120px;
   .content {
     position: relative;
     margin: 0 ${props => props.theme.margins.primary}px;
   }
 
   .card {
+    display: none;
     position: absolute;
     bottom: -70px;
     right: 100px;
@@ -37,12 +35,12 @@ export const FooterWrapper = styled.footer`
       color: ${props => props.theme.colors.purple_primary};
       margin-top: 30px;
     }
-    > button {
+    > a {
       height: 42px;
       border: 1.5px solid ${props => props.theme.colors.purple_primary};
       border-radius: 42px;
       padding: 0 20px;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       font-weight: 700;
       font-size: 18px;
@@ -51,6 +49,7 @@ export const FooterWrapper = styled.footer`
       margin-top: 30px;
       cursor: pointer;
       background-color: transparent;
+      text-decoration: none;
     }
   }
 
@@ -107,6 +106,12 @@ export const FooterWrapper = styled.footer`
   }
 
   @media (min-width: ${props => props.theme.breakpoints.desktop}) {
+    padding-top: 120px;
+    margin-top: -120px;
+  
+    .card {
+      display: block;
+    }
     > section {
       &:nth-child(1) {
         padding: 20px 0;

@@ -60,6 +60,14 @@ a.anim-link {
   }
 }
 
+@media (max-width: 1023px) {
+  .shape-bot, .shape-top {
+    > svg {
+      height: 40px!important;
+    }
+  }
+}
+
 ::-webkit-scrollbar {
   width: 4px;
   height: 0px;

@@ -6,7 +6,7 @@ export const ContactFormWrapper = styled.section`
 
   .content {
     margin: 0 ${props => props.theme.margins.primary}px;
-    padding: 0 120px 0 160px;
+    padding: 0;
   }
 
   .alert {
@@ -24,12 +24,12 @@ export const ContactFormWrapper = styled.section`
 
   h1 {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     > p {
       position: relative;
       font-weight: 700;
-      font-size: 45px;
-      line-height: 49px;
+      font-size: 30px;
+      line-height: 34px;
       color: ${props => props.theme.colors.blue_primary};
       padding-bottom: 3px;
       &:after {
@@ -85,7 +85,6 @@ export const ContactFormWrapper = styled.section`
           textarea {
             height: 320px;
             padding: 15px;
-            max-width: 600px;
           }
         }
       }
@@ -123,10 +122,15 @@ export const ContactFormWrapper = styled.section`
   }
 
   @media (min-width: ${props => props.theme.breakpoints.desktop}) {
+    .content {
+      padding: 0 120px 0 160px;
+    }
     h1 {
-      font-size: 28px;
-      line-height: 42px;
-      text-align: center;
+      justify-content: center;
+      > p {
+        font-size: 45px;
+        line-height: 49px;
+      }
     }
     .yform {
       .form {
@@ -142,6 +146,9 @@ export const ContactFormWrapper = styled.section`
             > label {
               font-size: 16px;
               line-height: 24px;
+            }
+            textarea {
+              max-width: 600px;
             }
           }
         }

@@ -10,11 +10,26 @@ export const MainHeaderWrapper = styled.nav`
   overflow: hidden;
   
   z-index: ${props => props.theme.zIndexes.headerBar};
-  transition: height .5s ease-in-out;
+  //transition: all .5s ease-in-out;
 
   &.open {
     height: 280px;
     background-color: ${props => props.theme.colors.white};
+
+    .content {
+      .control {
+        .menu {
+          > li {
+            &.btn {
+              > a {
+                border: 1.5px solid ${props => props.theme.colors.blue_primary};
+                color: ${props => props.theme.colors.blue_primary};
+              }
+            }
+          }
+        }
+      }
+    }
   }
   &.normal-bar {
     animation: anim-normal-bar-show;
@@ -26,17 +41,18 @@ export const MainHeaderWrapper = styled.nav`
   .content {
     margin: 0 ${props => props.theme.margins.primary}px;
     .logo {
-      display: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .control {
-      
+    .control {      
       .menu {
         font-weight: 500;
         font-size: 18px;
         line-height: 24px;
-        height: 0px;
         margin: 0;
+        padding: 0;
         list-style: none;
         
         transition: margin-top .4s ease-in-out, opacity .2s ease-in-out;
@@ -77,7 +93,6 @@ export const MainHeaderWrapper = styled.nav`
       display: flex;
       align-items: center;
       height: 90px;
-      width: 30px;
       cursor: pointer;
       color: ${props => props.theme.colors.black};
 

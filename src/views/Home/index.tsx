@@ -35,7 +35,8 @@ const Startseite = (): JSX.Element => {
         <br />
         Zusammenarbeit starten ipsum dolor sit amet consectetur adipisicing elit. Impedit a rerum distinctio, non commodi consectetur facilis nostrum saepe architecto porro quidem quia necessitatibus ea corporis autem tempora perspiciatis expedita quibusdam!
       `,
-      buttonText: "Zusammenarbeit"
+      buttonText: "Zusammenarbeit",
+      buttonUrl: "/kontakt",
     },
 
     intro2: {
@@ -43,7 +44,8 @@ const Startseite = (): JSX.Element => {
       description: `
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit a rerum distinctio, non commodi consectetur facilis nostrum saepe architecto porro quidem quia necessitatibus ea corpo
       `,
-      buttonText: "Unsere Lösung"
+      buttonText: "Unsere Lösung",      
+      buttonUrl: "/unsere-losung",
     }
 
   };
