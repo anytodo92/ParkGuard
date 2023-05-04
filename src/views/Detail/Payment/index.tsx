@@ -13,8 +13,8 @@ const Payment = (): JSX.Element => {
           Der Betrag von CHF 40.- muss innert 10 Tagen beglichen sein. Wir behalten es uns vor rechtliche Schritte einzuleiten.
           </p>
           <div className="func">
-            <a href="#" className="blue">Mit Kreditkarte bezahlen</a>
-            <a href="#" className="o-line">Einzahlungsschein bestellen</a>
+            <button className="blue">Mit Kreditkarte bezahlen</button>
+            <button className="o-line">Einzahlungsschein bestellen</button>
           </div>
         </div>
         <div className="info">

@@ -1,4 +1,5 @@
 import { Images, Icons } from "../../../utils/assets";
+import { Link } from "react-router-dom";
 import {
   BannerWrapper
 } from "./styled";
@@ -44,8 +45,12 @@ const Banner = ({ data, page }: BannerPropsType): JSX.Element => {
           }
           {(data.form)&&
             <div className="form">
-              <input placeholder={data.form.placeholder} />
-              <button>{data.form.buttonText}</button>
+              <form method="get" action="/detail" enctype="application/x-www-from-urlencoded">
+                <div className="wrapper">
+                  <input name="v" placeholder={data.form.placeholder} />
+                  <button type="submit">{data.form.buttonText}</button>
+                </div>
+              </form>
             </div>
           }
         </div>
@@ -61,7 +66,7 @@ const Banner = ({ data, page }: BannerPropsType): JSX.Element => {
                 }
                 {data.intro1.buttonText&&
                   <div className="func">
-                    <button>{data.intro1.buttonText}</button>
+                    <Link to={data.intro1.buttonUrl}>{data.intro1.buttonText}</Link>
                   </div>
                 }
               </div>
@@ -73,7 +78,7 @@ const Banner = ({ data, page }: BannerPropsType): JSX.Element => {
                 }
                 {data.intro2.buttonText&&
                   <div className="func">
-                    <button>{data.intro2.buttonText}</button>
+                    <Link to={data.intro2.buttonUrl}>{data.intro2.buttonText}</Link>
                   </div>
                 }
               </div>

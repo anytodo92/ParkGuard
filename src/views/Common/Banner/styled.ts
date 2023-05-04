@@ -85,10 +85,13 @@ export const BannerWrapper = styled.section`
         color: ${props => props.theme.colors.white};
       }
       .form {
-        display: flex;
-        align-items: center;
-        column-gap: 10px;
         margin-top: 30px;
+        .wrapper {
+          display: flex;
+          align-items: center;
+          column-gap: 10px;
+        }
+
         button, input {
           
           outline: 0;
@@ -98,7 +101,6 @@ export const BannerWrapper = styled.section`
           font-weight: 700;
           font-size: 18px;
           line-height: 22px;
-          cursor: pointer;
         }
 
         input {
@@ -131,6 +133,7 @@ export const BannerWrapper = styled.section`
           display: flex;
           align-items: center;
           justify-content: center;
+          cursor: pointer;
         }
       }
     }
@@ -152,12 +155,12 @@ export const BannerWrapper = styled.section`
         color: ${props => props.theme.colors.purple_primary};
         margin-top: 30px;
       }
-      button {
+      a {
         height: 42px;
         border: 1.5px solid ${props => props.theme.colors.purple_primary};
         border-radius: 42px;
         padding: 0 20px;
-        display: flex;
+        display: inline-flex;
         align-items: center;
         font-weight: 700;
         font-size: 18px;
@@ -166,6 +169,7 @@ export const BannerWrapper = styled.section`
         margin-top: 30px;
         cursor: pointer;
         background-color: transparent;
+        text-decoration: none;
       }
 
       .card1 {

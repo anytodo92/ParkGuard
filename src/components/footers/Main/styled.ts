@@ -35,12 +35,12 @@ export const FooterWrapper = styled.footer`
       color: ${props => props.theme.colors.purple_primary};
       margin-top: 30px;
     }
-    > button {
+    > a {
       height: 42px;
       border: 1.5px solid ${props => props.theme.colors.purple_primary};
       border-radius: 42px;
       padding: 0 20px;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       font-weight: 700;
       font-size: 18px;
@@ -49,6 +49,7 @@ export const FooterWrapper = styled.footer`
       margin-top: 30px;
       cursor: pointer;
       background-color: transparent;
+      text-decoration: none;
     }
   }
 

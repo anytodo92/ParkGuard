@@ -199,6 +199,7 @@ export const FormWrapper = styled.section`
 
       .tab-content {
         #submit_opinion {
+          padding-top: 40px;
           .yform {
             .form {
               grid-template-columns: 0.8fr 0.8fr 1fr;
@@ -213,7 +214,7 @@ export const FormWrapper = styled.section`
           }
         }
         #order_payment {
-          padding: 40px 300px 0;
+          padding: 40px 150px 0;
           .yform {
 
             .form {
@@ -226,6 +227,17 @@ export const FormWrapper = styled.section`
               }
             }
           }
+        }
+      }
+    }
+  }
+
+  @media (min-width: ${props => props.theme.breakpoints.desktop_lg}) {
+    .content {
+      .tab-content {
+        
+        #order_payment {
+          padding: 40px 300px 0;
         }
       }
     }

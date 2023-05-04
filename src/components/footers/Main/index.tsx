@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   Images,
   Icons,
@@ -38,7 +39,7 @@ const Footer = (): JSX.Element => {
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit a rerum distinctio, non commodi consectetur facilis nostrum
           </p>
-          <button>Kontaktieren</button>
+          <Link to="/kontakt">Kontaktieren</Link>
         </div>
       </div>
     </FooterWrapper>

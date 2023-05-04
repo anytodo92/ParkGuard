@@ -65,11 +65,9 @@ export const PaymentWrapper = styled.section`
         column-gap: 25px;
         row-gap: 25px;
         margin-top: 50px;
-        a {
+        button {
           width: 100%;
-          
           outline: 0;
-          
           padding: 0 30px;
           font-weight: 700;
           font-size: 16px;
@@ -81,10 +79,12 @@ export const PaymentWrapper = styled.section`
           display: flex;
           justify-content: center;
           text-align: center;
+          cursor: pointer;
 
           &.o-line {
             border: 1px solid ${props => props.theme.colors.blue_primary};
             color: ${props => props.theme.colors.blue_primary};
+            background-color: transparent;
           }
 
           &.blue {
