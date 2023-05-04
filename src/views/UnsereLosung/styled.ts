@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const UnsereLosungWrapper = styled.div`
-
   .banner {
     .bg {
       .lt {
@@ -32,12 +31,8 @@ export const UnsereLosungWrapper = styled.div`
 
   @media(min-width: ${props => props.theme.breakpoints.desktop}) {
     .banner {
-      height: auto;
-      .bg {
-        .lt {
-          width: 48%;
-        }
-      }
+      height: 680px;
+      
       .content {
         .summary {
           padding-bottom: 170px;
@@ -46,10 +41,8 @@ export const UnsereLosungWrapper = styled.div`
         }
         .cards {
           display: block;
-          
           .card1 {
-            right: 30%;
-            padding-bottom: 150px;
+            padding-bottom: 280px;
           }
         }
       }

@@ -132,9 +132,7 @@ export const BannerWrapper = styled.section`
           align-items: center;
           justify-content: center;
         }
-        
       }
-      
     }
 
     .cards {
@@ -230,7 +228,7 @@ export const BannerWrapper = styled.section`
       .qa {
         position: absolute;
         bottom: 100px;
-        left: 10%;
+        left: 8%;
         top: unset;
         width: auto;
         transform: unset;
@@ -248,7 +246,7 @@ export const BannerWrapper = styled.section`
         width: 35%;
         margin-top: -100px;
         align-self: center;
-        margin-left: 100px;
+        margin-left: 50px;
         padding-bottom: 0;
 
         h2 {
@@ -281,12 +279,9 @@ export const BannerWrapper = styled.section`
           bottom: -30px;
           right: 10%;
           transform: rotate(-6.76deg);
-          padding: 40px 20px 170px;
+          padding: 40px 20px 300px;
           width: 434px;
           margin-top: 0;
-          .func {
-            padding-bottom: 130px;
-          }
         }
         .card2 {
           position: absolute;
@@ -297,6 +292,17 @@ export const BannerWrapper = styled.section`
           width: 280px;
           margin-top: 0;
         }
+      }
+    }
+  }
+
+  @media(min-width: 1200px) {
+    .content {
+      .qa {
+        left: 10%;
+      }
+      .summary {        
+        margin-left: 100px;
       }
     }
   }

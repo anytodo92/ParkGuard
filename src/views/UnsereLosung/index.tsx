@@ -21,9 +21,7 @@ const UnsereLosung = (): JSX.Element => {
       description: `
       Durch ParkGuard kann das richterliche Parkverbot auf privatem Grund unkompliziert durchgesetzt werden.
       <br /><br />
-      Unsere digitale Tool-Landschaft reduziert den Aufwand<br />
-      auf ein Minimum. Für alle administrativen Schritte sind<br />
-      wir für Sie da.
+      Unsere digitale Tool-Landschaft reduziert den Aufwand auf ein Minimum. Für alle administrativen Schritte sind wir für Sie da.
       `
     },
 

@@ -46,14 +46,13 @@ export const MainHeaderWrapper = styled.nav`
       align-items: center;
     }
 
-    .control {
-      
+    .control {      
       .menu {
         font-weight: 500;
         font-size: 18px;
         line-height: 24px;
-        height: 0px;
         margin: 0;
+        padding: 0;
         list-style: none;
         
         transition: margin-top .4s ease-in-out, opacity .2s ease-in-out;
@@ -94,7 +93,6 @@ export const MainHeaderWrapper = styled.nav`
       display: flex;
       align-items: center;
       height: 90px;
-      width: 30px;
       cursor: pointer;
       color: ${props => props.theme.colors.black};
 
