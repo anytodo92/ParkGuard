@@ -131,14 +131,36 @@ export const FormWrapper = styled.section`
             }
             .file {
               position: relative;
+              display: flex;
+              flex-direction: column;
               .form-group {
                 opacity: 0;
-                position: absolute;
+                height: 0;
+                width: 0;
+                input {
+                  height: 0;
+                }
               }
-              button {
+              button#btn_sel {
                 border: 1px solid ${props => props.theme.colors.blue_primary};
                 color: ${props => props.theme.colors.blue_primary};
                 background-color: transparent;
+              }
+              #file_info {
+                display: flex;
+                align-items: center;
+                margin-left: 20px;
+                > button.close {
+                  width: auto;
+                  padding: 0 20px;
+                  font-size: 30px;
+                  color: red;
+                  background-color: transparent;
+                }
+                .txt {
+                  font-size: 14px;
+                  color: #333;
+                }
               }
             }
             .submit {
@@ -209,6 +231,11 @@ export const FormWrapper = styled.section`
               justify-content: space-between;
               button {
                 width: 200px;
+              }
+
+              .file {
+                flex-direction: row;
+                align-items: center;
               }
             }
           }

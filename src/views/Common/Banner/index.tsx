@@ -45,7 +45,7 @@ const Banner = ({ data, page }: BannerPropsType): JSX.Element => {
           }
           {(data.form)&&
             <div className="form">
-              <form method="get" action="/detail" enctype="application/x-www-from-urlencoded">
+              <form method="get" action="/detail" encType="application/x-www-from-urlencoded">
                 <div className="wrapper">
                   <input name="v" placeholder={data.form.placeholder} />
                   <button type="submit">{data.form.buttonText}</button>
