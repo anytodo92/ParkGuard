@@ -114,9 +114,13 @@ const Form = (): JSX.Element => {
                   <div className="file">
                     <div className="form-group">
                       <label className="control-label"></label>
-                      <input type="file" className="form-control" />
+                      <input id="attachment" type="file" className="form-control" />
                     </div>
-                    <button>Datei auswählen</button>
+                    <button id="btn_sel">Datei auswählen</button>
+                    <div id="file_info" style={{ display: "flex" }}>
+                        <span class="txt">tset</span>
+                        <button id="btn_close" class="close" type="button">×</button>
+                    </div>
                   </div>
                   <div className="submit">
                     <button>Absenden</button>
