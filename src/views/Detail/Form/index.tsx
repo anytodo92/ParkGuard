@@ -118,8 +118,8 @@ const Form = (): JSX.Element => {
                     </div>
                     <button id="btn_sel">Datei auswählen</button>
                     <div id="file_info" style={{ display: "flex" }}>
-                        <span class="txt">tset</span>
-                        <button id="btn_close" class="close" type="button">×</button>
+                        <span className="txt">tset</span>
+                        <button id="btn_close" className="close" type="button">×</button>
                     </div>
                   </div>
                   <div className="submit">
@@ -212,7 +212,7 @@ const Form = (): JSX.Element => {
                       </div>
                     </div>
                     <div className="group">
-                      <label>Land <sup>*</sup></label>
+                      <label>E-Mail <sup>*</sup></label>
                       <div className="entry-box">
                         <div className="form-group">
                           <label className="control-label"></label>
@@ -222,7 +222,6 @@ const Form = (): JSX.Element => {
                     </div>
                   </div>
                 </div>
-                <div className="desc">Anhang (z.B. Rechung / Parkerlaubnis / etc.)</div>
                 <div className="func">
                   <div className="submit">
                   <button className="blue">Absenden</button>
