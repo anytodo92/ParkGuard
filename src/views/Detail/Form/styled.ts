@@ -200,13 +200,13 @@ export const FormWrapper = styled.section`
       #order_payment {
         padding: 40px 0 0;
         .yform {
-
           .form {
             grid-template-columns: 1fr;
           }
           .func {
             display: flex;
             flex-direction: column;
+            margin-top: 20px;
           }
         }
       }
