@@ -10,6 +10,22 @@ type BannerPropsType = {
 };
 
 const Banner = ({ data, page }: BannerPropsType): JSX.Element => {
+  /*function keypress(event) {
+      var text = event.target.value;
+      try {
+          var cleaned = ("" + text).replace(/\D/g, "");
+          var match = cleaned.match(/^(\d{0,6})?(\d{0,3})?(\d+)?$/);
+          var intlCode = match[1] ? "+1 " : "";
+          console.log(match);
+          event.target.value = [
+            match[1],
+            match[2] ? "-" : "",
+            match[2],
+          ].join("");
+        } catch (err) {
+          return "";
+        }
+    }*/
   return (
     <BannerWrapper className={`banner ${page}`}>
       <div className="bg">
