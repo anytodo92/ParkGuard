@@ -70,6 +70,7 @@ export const MainHeaderWrapper = styled.nav`
           }
 
           &.btn {
+            border: none;
             > a {
               width: 200px;
               height: 36px;
