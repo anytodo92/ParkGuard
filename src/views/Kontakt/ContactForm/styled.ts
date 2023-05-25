@@ -96,6 +96,7 @@ export const ContactFormWrapper = styled.section`
       font-size: 18px;
       line-height: 27px;
       margin-top: 20px;
+      background-color: transparent;
       > sup {
         font-weight: 700;
         color: ${props => props.theme.colors.red_primary};
