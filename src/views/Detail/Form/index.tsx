@@ -148,47 +148,6 @@ const Form = (): JSX.Element => {
                       </div>
                     </div>
                     <div className="group">
-                      <label>Geschlecht <sup>*</sup></label>
-                      <div className="entry-box">
-                          <div className="form-group">
-                              <label className="control-label"></label>
-                              <select name="gender" className="form-control">
-                                  <option value="male">Männlich</option>
-                                  <option value="female">Weiblich</option>
-                              </select>
-                          </div>
-                      </div>
-                  </div>
-                    <div className="group">
-                      <label>Strasse / Nr. <sup>*</sup></label>
-                      <div className="entry-box">
-                        <div className="form-group">
-                          <label className="control-label"></label>
-                          <input type="text" className="form-control" />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="group">
-                      <label>Telefon <sup>*</sup></label>
-                      <div className="entry-box">
-                        <div className="form-group">
-                          <label className="control-label"></label>
-                          <input type="text" className="form-control" />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="group">
-                      <label>Geburtsdatum <sup>*</sup></label>
-                      <div className="entry-box">
-                        <div className="form-group">
-                          <label className="control-label"></label>
-                          <input type="text" className="form-control" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col">
-                    <div className="group">
                       <label>Vorname / Nachname <sup>*</sup></label>
                       <div className="entry-box">
                         <div className="form-group">
@@ -215,13 +174,64 @@ const Form = (): JSX.Element => {
                       </div>
                     </div>
                     <div className="group">
+                      <label>Telefon <sup>*</sup></label>
+                      <div className="entry-box">
+                        <div className="form-group">
+                          <label className="control-label"></label>
+                          <input type="text" className="form-control" />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="group">
+                      <label>E-Mail <sup>*</sup></label>
+                      <div className="entry-box">
+                        <div className="form-group">
+                          <label className="control-label"></label>
+                          <input type="text" className="form-control" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col">
+                    <div className="group">
+                      <label>Geschlecht <sup>*</sup></label>
+                      <div className="entry-box">
+                          <div className="form-group">
+                              <label className="control-label"></label>
+                              <select name="gender" className="form-control">
+                                  <option value="male">Männlich</option>
+                                  <option value="female">Weiblich</option>
+                              </select>
+                          </div>
+                      </div>
+                    </div>
+                    <div className="group">
+                      <label>Strasse / Nr. <sup>*</sup></label>
+                      <div className="entry-box">
+                        <div className="form-group">
+                          <label className="control-label"></label>
+                          <input type="text" className="form-control" />
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="group">
                       <label>Land <sup>*</sup></label>
                       <div className="entry-box">
                         <div className="form-group">
                           <label className="control-label"></label>
                            <select name="country" className="form-control">
-                              <option valu="CH">Schweiz</option>
+                              <option value="CH">Schweiz</option>
                           </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="group">
+                      <label>Geburtsdatum <sup>*</sup></label>
+                      <div className="entry-box">
+                        <div className="form-group">
+                          <label className="control-label"></label>
+                          <input type="text" className="form-control" />
                         </div>
                       </div>
                     </div>

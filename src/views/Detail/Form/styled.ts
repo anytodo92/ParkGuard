@@ -109,6 +109,10 @@ export const FormWrapper = styled.section`
                   height: 308px;
                   padding: 15px;
                 }
+
+                select {
+                  -webkit-appearance: none;
+                }
               }
             }
           }

@@ -57,8 +57,8 @@ const MainHeader: React.FC = () => {
         <div className="logo">
           <a href="/">
             {(!stickyBar && !toggleStatus)
-              ? <img src={Images.WhiteLogoUrl} />
-              : <img src={Images.DarkGrayLogoUrl} />
+              ? <img src={Images.WhiteLogoUrl} width="171" height="45" />
+              : <img src={Images.DarkGrayLogoUrl} width="171" height="45" />
             }
           </a>
           <div
